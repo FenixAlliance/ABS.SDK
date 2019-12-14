@@ -2,6 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>FenixAlliance.ABS.SDK</PackageId>
+    <Company>Fenix Alliance</Company>
+    <Authors>Fenix Alliance</Authors>
+    <Product>FenixAlliance.ABS.SDK</Product>
+    <Description>Alliance Business Suite C# SDK (.NetStandard 2.0)</Description>
+    <Copyright>© 2009 - 2019 Fenix Alliance Group. All rights reserved.</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/FenixAlliance/ABS.SDK</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/FenixAlliance/ABS.SDK</RepositoryUrl>
+    <PackageIcon>IconApp.png</PackageIcon>
+    <PackageIconUrl />
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,6 +31,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FenixAlliance.Models.DTOs\FenixAlliance.Models.DTOs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\FenixAlliance\wwwroot\images\FenixAlliance\Isotipo\IconApp.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
