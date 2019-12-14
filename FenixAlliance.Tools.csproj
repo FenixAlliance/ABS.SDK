@@ -27,10 +27,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\FenixAlliance.Models.DTOs\FenixAlliance.Models.DTOs.csproj" />
+    <PackageReference Include="FenixAlliance.Models.DTOs\" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>
