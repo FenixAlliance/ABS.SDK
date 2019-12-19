@@ -12,8 +12,9 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/FenixAlliance/ABS.SDK</PackageProjectUrl>
     <RepositoryUrl>https://github.com/FenixAlliance/ABS.SDK</RepositoryUrl>
-    <PackageIcon>IconApp.png</PackageIcon>
+    <PackageIcon>Icon.png</PackageIcon>
     <PackageIconUrl />
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,11 +28,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.0.1" />
-    <PackageReference Include="FenixAlliance.Models.DTOs\" Version="1.0.0" />
+    <PackageReference Include="FenixAlliance.Models.DTOs" Version="1.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\FenixAlliance\wwwroot\images\FenixAlliance\Isotipo\IconApp.png">
+    <None Update="Icon.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

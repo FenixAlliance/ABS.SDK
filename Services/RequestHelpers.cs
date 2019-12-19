@@ -9,7 +9,9 @@ using FenixAlliance.Models.DTOs.Components.Billing;
 using FenixAlliance.Models.DTOs.Components.CRM;
 using FenixAlliance.Models.DTOs.Components.Social;
 using FenixAlliance.Models.DTOs.Components.Commons;
-
+using FenixAlliance.Models.DTOs.Components.Store.Carts;
+using FenixAlliance.Models.DTOs.Requests;
+using FenixAlliance.Tools.Helpers;
 namespace FenixAlliance.Tools.Services
 {
     public class RequestHelpers : IRequestHelpers
@@ -29,7 +31,7 @@ namespace FenixAlliance.Tools.Services
 
             var ContactRequest = new Contact()
             {
-               // CountryID = GetActiveDirectoryCountry(User), // TODO: Convert Country Name to ISO3 by calling countries api
+                // CountryID = GetActiveDirectoryCountry(User), // TODO: Convert Country Name to ISO3 by calling countries api
                 Email = GetActiveDirectoryEmail(User),
                 Name = GetActiveDirectoryGivenName(User),
                 ActiveDirectoryID = GetActiveDirectoryNameIdentifier(User),
@@ -52,6 +54,28 @@ namespace FenixAlliance.Tools.Services
             }
 
             return Response;
+        }
+
+        public async Task<Cart> GetCurrentCart(ClaimsPrincipal CurrentUser, string CurrentIP)
+        {
+            if (CurrentUser.Identity.IsAuthenticated)
+            {
+                var CurrentContact = await GetCurrentContactAsync(CurrentUser);
+                var CartRequest = await HttpClient.GetAsync($"Store/Carts/{CurrentContact.CartID}");
+                CartRequest.EnsureSuccessStatusCode();
+                return Tools.Helpers.Deserialize.FromJson<Cart>(await CartRequest.Content.ReadAsStringAsync());
+            }
+
+            // Get IP
+            NewGuestCartRequest newGuestCartRequest = new NewGuestCartRequest()
+            {
+                GuestIP = CurrentIP
+            };
+
+            HttpContent CartPOSTRequest = new StringContent(Tools.Helpers.Serialize.ToJson(newGuestCartRequest), Encoding.UTF8, "application/json");
+            var CartPOSTResponse = await HttpClient.PostAsync("Store/Carts/CreateCart", CartPOSTRequest);
+            CartPOSTResponse.EnsureSuccessStatusCode();
+            return Tools.Helpers.Deserialize.FromJson<Cart>(await CartPOSTResponse.Content.ReadAsStringAsync());
         }
 
         public Task<List<FollowRecord>> GetCurrentContactFollowers(ClaimsPrincipal CurrentUser)
