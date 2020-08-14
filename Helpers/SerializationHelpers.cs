@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace FenixAlliance.Tools.Helpers
+namespace FenixAlliance.SDK.Helpers
 {
     public static class Deserialize
     {

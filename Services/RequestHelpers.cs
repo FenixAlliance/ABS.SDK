@@ -1,5 +1,4 @@
-﻿using FenixAlliance.Tools.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Security.Claims;
@@ -11,8 +10,10 @@ using FenixAlliance.Models.DTOs.Components.Social;
 using FenixAlliance.Models.DTOs.Components.Commons;
 using FenixAlliance.Models.DTOs.Components.Store.Carts;
 using FenixAlliance.Models.DTOs.Requests;
-using FenixAlliance.Tools.Helpers;
-namespace FenixAlliance.Tools.Services
+using FenixAlliance.SDK.Helpers;
+using FenixAlliance.SDK.Interfaces;
+
+namespace FenixAlliance.SDK.Services
 {
     public class RequestHelpers : IRequestHelpers
     {
@@ -42,13 +43,13 @@ namespace FenixAlliance.Tools.Services
             try
             {
                 HttpContent ContactPOSTRequest = new StringContent(ContactRequest.ToJson(), Encoding.UTF8, "application/json");
-                var ContactPOSTResponse = await HttpClient.PostAsync("crm/contacts", ContactPOSTRequest);
+                var ContactPOSTResponse = await HttpClient.PostAsync("https://fenixalliance.com.co/api/v2/contacts", ContactPOSTRequest);
                 ContactPOSTResponse.EnsureSuccessStatusCode();
                 Response = Contact.FromJson(await ContactPOSTResponse.Content.ReadAsStringAsync());
             }
             catch (Exception e)
             {
-                var ContactGETRequest = await HttpClient.GetAsync($"crm/contacts/{ContactRequest.ActiveDirectoryID}");
+                var ContactGETRequest = await HttpClient.GetAsync($"https://fenixalliance.com.co/api/v2/contacts/{ContactRequest.ActiveDirectoryID}");
                 ContactGETRequest.EnsureSuccessStatusCode();
                 Response = Contact.FromJson(await ContactGETRequest.Content.ReadAsStringAsync());
             }
@@ -61,9 +62,9 @@ namespace FenixAlliance.Tools.Services
             if (CurrentUser.Identity.IsAuthenticated)
             {
                 var CurrentContact = await GetCurrentContactAsync(CurrentUser);
-                var CartRequest = await HttpClient.GetAsync($"Store/Carts/{CurrentContact.CartID}");
+                var CartRequest = await HttpClient.GetAsync($"https://fenixalliance.com.co/api/v2/Store/Carts/{CurrentContact.CartID}");
                 CartRequest.EnsureSuccessStatusCode();
-                return Tools.Helpers.Deserialize.FromJson<Cart>(await CartRequest.Content.ReadAsStringAsync());
+                return SDK.Helpers.Deserialize.FromJson<Cart>(await CartRequest.Content.ReadAsStringAsync());
             }
 
             // Get IP
@@ -72,10 +73,10 @@ namespace FenixAlliance.Tools.Services
                 GuestIP = CurrentIP
             };
 
-            HttpContent CartPOSTRequest = new StringContent(Tools.Helpers.Serialize.ToJson(newGuestCartRequest), Encoding.UTF8, "application/json");
-            var CartPOSTResponse = await HttpClient.PostAsync("Store/Carts/CreateCart", CartPOSTRequest);
+            HttpContent CartPOSTRequest = new StringContent(SDK.Helpers.Serialize.ToJson(newGuestCartRequest), Encoding.UTF8, "application/json");
+            var CartPOSTResponse = await HttpClient.PostAsync("https://fenixalliance.com.co/api/v2/Store/Carts/CreateCart", CartPOSTRequest);
             CartPOSTResponse.EnsureSuccessStatusCode();
-            return Tools.Helpers.Deserialize.FromJson<Cart>(await CartPOSTResponse.Content.ReadAsStringAsync());
+            return SDK.Helpers.Deserialize.FromJson<Cart>(await CartPOSTResponse.Content.ReadAsStringAsync());
         }
 
         public Task<List<FollowRecord>> GetCurrentContactFollowers(ClaimsPrincipal CurrentUser)

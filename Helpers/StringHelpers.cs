@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace FenixAlliance.Tools.Helpers
+namespace FenixAlliance.SDK.Helpers
 {
     public class StringHelpers
     {

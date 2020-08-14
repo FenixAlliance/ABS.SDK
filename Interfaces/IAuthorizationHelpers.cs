@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace FenixAlliance.Tools.Interfaces
+namespace FenixAlliance.SDK.Interfaces
 {
     public interface IAuthorizationHelpers
     {

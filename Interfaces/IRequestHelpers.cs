@@ -6,7 +6,7 @@ using FenixAlliance.Models.DTOs.Components.Social;
 using FenixAlliance.Models.DTOs.Components.Commons;
 using FenixAlliance.Models.DTOs.Components.Store.Carts;
 
-namespace FenixAlliance.Tools.Interfaces
+namespace FenixAlliance.SDK.Interfaces
 {
     public interface IRequestHelpers
     {

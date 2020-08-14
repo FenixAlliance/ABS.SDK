@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace FenixAlliance.Tools.Helpers
+namespace FenixAlliance.SDK.Helpers
 {
     public static class PowerShellHelpers
     {

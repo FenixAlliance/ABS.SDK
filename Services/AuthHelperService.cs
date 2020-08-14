@@ -1,16 +1,15 @@
-﻿using System;
+﻿using FenixAlliance.Models.DTOs.Authorization;
+using FenixAlliance.SDK.Helpers;
+using FenixAlliance.SDK.Interfaces;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using System;
 using System.Collections.Generic;
-using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using FenixAlliance.Models.DTOs.Authorization;
-using FenixAlliance.Tools.Helpers;
-using FenixAlliance.Tools.Interfaces;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
 
-namespace FenixAlliance.Tools.Services
+namespace FenixAlliance.SDK.Services
 {
     public class AuthHelperService : IAuthorizationHelpers
     {
@@ -39,7 +38,7 @@ namespace FenixAlliance.Tools.Services
         {
             try
             {
-                using(var client = new HttpClient())
+                using (var client = new HttpClient())
                 {
                     client.DefaultRequestHeaders.Add("Accept", "application/json");
                     var TokenRequest = await client.GetAsync(AuthEndpoint);
@@ -56,14 +55,15 @@ namespace FenixAlliance.Tools.Services
                 Console.WriteLine(e.ToString());
             }
         }
+
         public async Task<JsonWebToken> GetToken()
         {
             JsonWebToken Response = null;
             try
             {
-                using(var client = new HttpClient())
+                using (var client = new HttpClient())
                 {
-                    client.DefaultRequestHeaders.Add("Accept",  "application/json");
+                    client.DefaultRequestHeaders.Add("Accept", "application/json");
                     var TokenRequest = await client.GetAsync(AuthEndpoint);
                     TokenRequest.EnsureSuccessStatusCode();
                     var TokenString = await TokenRequest.Content.ReadAsStringAsync();
@@ -74,8 +74,27 @@ namespace FenixAlliance.Tools.Services
             {
                 Console.WriteLine(e.ToString());
             }
-
             return Response;
+        }
+
+        public async Task<JsonWebToken> RefreshToken(JsonWebToken JsonWebToken)
+        {
+            try
+            {
+                if (JsonWebToken == null || String.IsNullOrEmpty(JsonWebToken.AccessToken) || String.IsNullOrEmpty(JsonWebToken.TokenType))
+                {
+                    JsonWebToken = await GetToken();
+                }
+                else
+                {
+                    //TODO:_ Check Token Header for Expiration and renew if expired.
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
+            }
+            return JsonWebToken;
         }
         public async Task AuthorizeClient(List<string> RequestedScopes)
         {

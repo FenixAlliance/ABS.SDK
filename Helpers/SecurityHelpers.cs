@@ -4,7 +4,7 @@ using System.Text;
 using FenixAlliance.Models.DTOs.Authorization;
 using Microsoft.AspNetCore.WebUtilities;
 
-namespace FenixAlliance.Tools.Helpers
+namespace FenixAlliance.SDK.Helpers
 {
     public class SecurityHelpers
     {
