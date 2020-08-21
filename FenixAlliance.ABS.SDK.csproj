@@ -14,12 +14,12 @@
     <RepositoryUrl>https://github.com/FenixAlliance/ABS.SDK</RepositoryUrl>
     <PackageIcon>Icon.png</PackageIcon>
     <PackageIconUrl />
-    <Version>1.0.4</Version>
+    <Version>1.0.7</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="JWT" Version="7.2.1" />
-    <PackageReference Include="Sendgrid" Version="9.20.0" />
+    <PackageReference Include="Sendgrid" Version="9.21.0" />
     <PackageReference Include="MongoDB.Bson" Version="2.11.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.11.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.7" />
@@ -28,11 +28,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.7" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.7" />
-
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FAG.Web\FenixAlliance.Models.DTOs\FenixAlliance.Models.DTOs.csproj" />
+    <PackageReference Include="FenixAlliance.Models.DTOs" Version="1.0.4" />
   </ItemGroup>
 
   <ItemGroup>

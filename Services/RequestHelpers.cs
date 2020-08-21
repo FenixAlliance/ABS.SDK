@@ -49,7 +49,7 @@ namespace FenixAlliance.SDK.Services
             }
             catch (Exception e)
             {
-                var ContactGETRequest = await HttpClient.GetAsync($"https://fenixalliance.com.co/api/v2/contacts/{ContactRequest.ActiveDirectoryID}");
+                var ContactGETRequest = await HttpClient.GetAsync($"https://rest.fenixalliance.com.co/api/v2/contacts/{ContactRequest.ActiveDirectoryID}");
                 ContactGETRequest.EnsureSuccessStatusCode();
                 Response = Contact.FromJson(await ContactGETRequest.Content.ReadAsStringAsync());
             }
@@ -62,7 +62,7 @@ namespace FenixAlliance.SDK.Services
             if (CurrentUser.Identity.IsAuthenticated)
             {
                 var CurrentContact = await GetCurrentContactAsync(CurrentUser);
-                var CartRequest = await HttpClient.GetAsync($"https://fenixalliance.com.co/api/v2/Store/Carts/{CurrentContact.CartID}");
+                var CartRequest = await HttpClient.GetAsync($"https://rest.fenixalliance.com.co/api/v2/Store/Carts/{CurrentContact.CartID}");
                 CartRequest.EnsureSuccessStatusCode();
                 return SDK.Helpers.Deserialize.FromJson<Cart>(await CartRequest.Content.ReadAsStringAsync());
             }
@@ -74,7 +74,7 @@ namespace FenixAlliance.SDK.Services
             };
 
             HttpContent CartPOSTRequest = new StringContent(SDK.Helpers.Serialize.ToJson(newGuestCartRequest), Encoding.UTF8, "application/json");
-            var CartPOSTResponse = await HttpClient.PostAsync("https://fenixalliance.com.co/api/v2/Store/Carts/CreateCart", CartPOSTRequest);
+            var CartPOSTResponse = await HttpClient.PostAsync("https://rest.fenixalliance.com.co/api/v2/Store/Carts/CreateCart", CartPOSTRequest);
             CartPOSTResponse.EnsureSuccessStatusCode();
             return SDK.Helpers.Deserialize.FromJson<Cart>(await CartPOSTResponse.Content.ReadAsStringAsync());
         }

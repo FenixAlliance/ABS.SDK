@@ -26,11 +26,11 @@ namespace FenixAlliance.SDK.Services
         {
             _configuration = configuration;
             _env = hostingEnvironment;
-            PublicKey = _configuration.GetSection("AllianceBusinessSuite").GetValue<string>("PublicKey");
-            PrivateKey = _configuration.GetSection("AllianceBusinessSuite").GetValue<string>("PrivateKey");
-            Scopes = _configuration.GetSection("AllianceBusinessSuite").GetValue<string>("Scopes");
-            AuthEndpoint = $"https://fenixalliance.com.co/api/v2/OAuth2/Token?client_id={PublicKey}&client_secret={PrivateKey}&grant_type=client_credentials&requested_scopes={Scopes}";
-            WebClient = new HttpClient() { BaseAddress = new Uri("https://fenixalliance.com.co/api/v2/") };
+            PublicKey = _configuration.GetSection("ABS").GetValue<string>("PublicKey");
+            PrivateKey = _configuration.GetSection("ABS").GetValue<string>("PrivateKey");
+            Scopes = _configuration.GetSection("ABS").GetValue<string>("Scopes");
+            AuthEndpoint = $"https://rest.fenixalliance.com.co/api/v2/OAuth2/Token?client_id={PublicKey}&client_secret={PrivateKey}&grant_type=client_credentials&requested_scopes={Scopes}";
+            WebClient = new HttpClient() { BaseAddress = new Uri("https://rest.fenixalliance.com.co/api/v2/") };
             //AuthorizeClient();
         }
 
