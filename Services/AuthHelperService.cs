@@ -96,25 +96,20 @@ namespace FenixAlliance.SDK.Services
             }
             return JsonWebToken;
         }
+
         public async Task AuthorizeClient(List<string> RequestedScopes)
         {
             try
             {
-                var Scopes = string.Empty;
-                RequestedScopes.ForEach(RequestedScope =>
-                {
-                    Scopes += RequestedScope + " ";
-                });
-                var TokenRequest = await WebClient.GetAsync($"OAuth2/Token?client_id={PublicKey}&client_secret={PrivateKey}&grant_type=client_credentials&requested_scopes={Scopes}");
-                TokenRequest.EnsureSuccessStatusCode();
-                var Token = Deserialize.FromJson<JsonWebToken>(await TokenRequest.Content.ReadAsStringAsync());
-                IsAuthorized = true;
-                WebClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(Token.TokenType, Token.AccessToken);
+                var Token = await GetToken();
 
+                this.IsAuthorized = true;
+
+                WebClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue(Token.TokenType, Token.AccessToken);
             }
             catch (Exception e)
             {
-                IsAuthorized = false;
+                this.IsAuthorized = false;
                 Console.WriteLine(e.ToString());
             }
         }
