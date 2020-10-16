@@ -7,8 +7,8 @@
     <Company>Fenix Alliance</Company>
     <Authors>Fenix Alliance</Authors>
     <Product>FenixAlliance.ABS.SDK</Product>
-    <Description>Alliance Business Suite C# SDK (.NetStandard 2.0)</Description>
-    <Copyright>© 2009 - 2019 Fenix Alliance Group. All rights reserved.</Copyright>
+    <Description>Alliance Business Suite C# SDK (.Net Standard 2.0)</Description>
+    <Copyright>© 2009 - 2020 Fenix Alliance Inc. All rights reserved.</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/FenixAlliance/ABS.SDK</PackageProjectUrl>
     <RepositoryUrl>https://github.com/FenixAlliance/ABS.SDK</RepositoryUrl>
@@ -18,16 +18,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="JWT" Version="7.2.1" />
+    <PackageReference Include="JWT" Version="7.2.2" />
     <PackageReference Include="Sendgrid" Version="9.21.0" />
-    <PackageReference Include="MongoDB.Bson" Version="2.11.0" />
-    <PackageReference Include="MongoDB.Driver" Version="2.11.0" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.7" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.1" />
+    <PackageReference Include="MongoDB.Bson" Version="2.11.2" />
+    <PackageReference Include="MongoDB.Driver" Version="2.11.2" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.20.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.9" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
     <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.9" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.9" />
   </ItemGroup>
 
   <ItemGroup>
