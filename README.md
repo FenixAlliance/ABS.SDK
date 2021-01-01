@@ -261,15 +261,15 @@ There is a separate [Documentation repository](https://github.com/fenixalliance/
 # Roadmap
 This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist.
 
-V.2.0.0 ( released in conjuntion with .NET 5 on Nov 11, 2020 )
+V.2.0.0 ( released in 2021 T4 )
 - [ ] Migration to .NET 6
 
-V.1.7.5 ( released in conjuntion with .NET 5 on Nov 11, 2020 )
+V.1.7.5 ( released in 2021 T3 )
 - [ ] UBL 2.1 Support
 - [ ] Process Canvas.
 - [ ] PowerShell SDK 
 
-V.1.5.0 ( released in conjuntion with .NET 5 on Nov 11, 2020 )
+V.1.5.0 ( released in 2021 T2 )
 - [ ] gRPC Modularization
 - [ ] Reporting Dashboard
 - [ ] Dynamic Dashboards
@@ -277,7 +277,7 @@ V.1.5.0 ( released in conjuntion with .NET 5 on Nov 11, 2020 )
 - [ ] gRPC Modularization
 - [ ] ACS Modularization
 
-V.1.2.5 ( released in conjuntion with .NET 5 on Nov 11, 2020 )
+V.1.2.5 ( released in 2021 T1 )
 - [ ] Static Localization ( ie. labels, help text, etc.. )
 - [ ] ARIA Tags Integration for Studio
 - [ ] ComputeWorks Cloud Platform Integration
