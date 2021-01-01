@@ -4,15 +4,16 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using FenixAlliance.Models.DTOs.Components.Store;
-using Microsoft.Identity.Client;
 using Newtonsoft.Json;
 
 namespace FenixAlliance.Passport.Pocket.Services
 {
-    public class MockDataStore : IDataStore<Product>
+    public class MockDataStore : IDataRepository<Product>
     {
         List<Product> Products;
+
         public static string ApiEndpoint = "https://fenixalliance.com.co/api/andy/products";
+
         public MockDataStore()
         {
             Products = new List<Product>();

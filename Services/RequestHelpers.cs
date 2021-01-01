@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Security.Claims;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
-using FenixAlliance.Models.DTOs.Components.Billing;
+using FenixAlliance.Models.DTOs.Components.Commons;
 using FenixAlliance.Models.DTOs.Components.CRM;
 using FenixAlliance.Models.DTOs.Components.Social;
-using FenixAlliance.Models.DTOs.Components.Commons;
 using FenixAlliance.Models.DTOs.Components.Store.Carts;
 using FenixAlliance.Models.DTOs.Requests;
-using FenixAlliance.SDK.Helpers;
 using FenixAlliance.SDK.Interfaces;
 
 namespace FenixAlliance.SDK.Services
@@ -64,7 +63,7 @@ namespace FenixAlliance.SDK.Services
                 var CurrentContact = await GetCurrentContactAsync(CurrentUser);
                 var CartRequest = await HttpClient.GetAsync($"https://rest.fenixalliance.com.co/api/v2/Store/Carts/{CurrentContact.CartID}");
                 CartRequest.EnsureSuccessStatusCode();
-                return SDK.Helpers.Deserialize.FromJson<Cart>(await CartRequest.Content.ReadAsStringAsync());
+                return JsonSerializer.Deserialize<Cart>(await CartRequest.Content.ReadAsStringAsync());
             }
 
             // Get IP
@@ -73,10 +72,10 @@ namespace FenixAlliance.SDK.Services
                 GuestIP = CurrentIP
             };
 
-            HttpContent CartPOSTRequest = new StringContent(SDK.Helpers.Serialize.ToJson(newGuestCartRequest), Encoding.UTF8, "application/json");
+            HttpContent CartPOSTRequest = new StringContent(JsonSerializer.Serialize(newGuestCartRequest), Encoding.UTF8, "application/json");
             var CartPOSTResponse = await HttpClient.PostAsync("https://rest.fenixalliance.com.co/api/v2/Store/Carts/CreateCart", CartPOSTRequest);
             CartPOSTResponse.EnsureSuccessStatusCode();
-            return SDK.Helpers.Deserialize.FromJson<Cart>(await CartPOSTResponse.Content.ReadAsStringAsync());
+            return JsonSerializer.Deserialize<Cart>(await CartPOSTResponse.Content.ReadAsStringAsync());
         }
 
         public Task<List<FollowRecord>> GetCurrentContactFollowers(ClaimsPrincipal CurrentUser)
@@ -119,7 +118,9 @@ namespace FenixAlliance.SDK.Services
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.Equals("name"))
+                    {
                         return claim.Value;
+                    }
                 }
             }
             return "";
@@ -134,8 +135,9 @@ namespace FenixAlliance.SDK.Services
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.Contains("nameidentifier"))
+                    {
                         return claim.Value;
-
+                    }
                 }
             }
             return "";
@@ -149,7 +151,9 @@ namespace FenixAlliance.SDK.Services
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.Contains("newUser"))
+                    {
                         return claim.Value;
+                    }
                 }
             }
             return "";
@@ -163,8 +167,9 @@ namespace FenixAlliance.SDK.Services
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().Contains("surname"))
+                    {
                         return claim.Value.ToString();
-
+                    }
                 }
             }
             return "";
@@ -178,8 +183,9 @@ namespace FenixAlliance.SDK.Services
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().Contains("givenname"))
+                    {
                         return claim.Value.ToString();
-
+                    }
                 }
             }
             return "";
@@ -193,8 +199,9 @@ namespace FenixAlliance.SDK.Services
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().Contains("jobTitle"))
+                    {
                         return claim.Value.ToString();
-
+                    }
                 }
             }
             return "";
@@ -208,8 +215,9 @@ namespace FenixAlliance.SDK.Services
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().Contains("country"))
+                    {
                         return claim.Value.ToString();
-
+                    }
                 }
             }
             return "";
@@ -224,7 +232,9 @@ namespace FenixAlliance.SDK.Services
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().Contains("email"))
+                    {
                         return claim.Value.ToString();
+                    }
                 }
             }
             return "";
@@ -238,7 +248,9 @@ namespace FenixAlliance.SDK.Services
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().ToLower().Contains("identityprovider"))
+                    {
                         return claim.Value.ToString();
+                    }
                 }
             }
             return "";
@@ -253,7 +265,9 @@ namespace FenixAlliance.SDK.Services
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().ToLower().Contains("token"))
+                    {
                         return claim.Value.ToString();
+                    }
                 }
             }
             return "";

@@ -9,9 +9,11 @@ namespace FenixAlliance.SDK.Helpers
             ProcessStartInfo processInfo;
             Process process;
 
-            processInfo = new ProcessStartInfo(command, arguments);
-            processInfo.CreateNoWindow = true;
-            processInfo.UseShellExecute = false;
+            processInfo = new ProcessStartInfo(command, arguments)
+            {
+                CreateNoWindow = true,
+                UseShellExecute = false
+            };
 
             process = Process.Start(processInfo);
         }

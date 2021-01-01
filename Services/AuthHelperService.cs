@@ -1,13 +1,13 @@
-﻿using FenixAlliance.Models.DTOs.Authorization;
-using FenixAlliance.SDK.Helpers;
-using FenixAlliance.SDK.Interfaces;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Text.Json;
 using System.Threading.Tasks;
+using FenixAlliance.Models.DTOs.Authorization;
+using FenixAlliance.SDK.Interfaces;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
 
 namespace FenixAlliance.SDK.Services
 {
@@ -18,20 +18,22 @@ namespace FenixAlliance.SDK.Services
         private string PublicKey { get; set; }
         private string PrivateKey { get; set; }
         private string Scopes { get; set; }
+        private string BaseEndpoint { get; set; } = "rest.absuite.net";
         private string AuthEndpoint { get; set; }
         public bool IsAuthorized { get; set; }
         public HttpClient WebClient { get; set; }
 
         public AuthHelperService(IConfiguration configuration, IHostEnvironment hostingEnvironment)
         {
-            _configuration = configuration;
             _env = hostingEnvironment;
+            _configuration = configuration;
+            Scopes = _configuration.GetSection("ABS").GetValue<string>("Scopes");
             PublicKey = _configuration.GetSection("ABS").GetValue<string>("PublicKey");
             PrivateKey = _configuration.GetSection("ABS").GetValue<string>("PrivateKey");
-            Scopes = _configuration.GetSection("ABS").GetValue<string>("Scopes");
-            AuthEndpoint = $"https://rest.fenixalliance.com.co/api/v2/OAuth2/Token?client_id={PublicKey}&client_secret={PrivateKey}&grant_type=client_credentials&requested_scopes={Scopes}";
-            WebClient = new HttpClient() { BaseAddress = new Uri("https://rest.fenixalliance.com.co/api/v2/") };
-            //AuthorizeClient();
+            BaseEndpoint = _configuration.GetSection("ABS").GetValue<string>("BaseEndpoint");
+            AuthEndpoint = $"https://{BaseEndpoint}/api/v2/OAuth2/Token?client_id={PublicKey}&client_secret={PrivateKey}&grant_type=client_credentials&requested_scopes={Scopes}";
+            WebClient = new HttpClient() { BaseAddress = new Uri($"https://{BaseEndpoint}/api/v2/") };
+            WebClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
         public async Task AuthorizeClient()
@@ -44,7 +46,7 @@ namespace FenixAlliance.SDK.Services
                     var TokenRequest = await client.GetAsync(AuthEndpoint);
                     TokenRequest.EnsureSuccessStatusCode();
                     var TokenString = await TokenRequest.Content.ReadAsStringAsync();
-                    var Token = Deserialize.FromJson<JsonWebToken>(TokenString);
+                    var Token = JsonSerializer.Deserialize<JsonWebToken>(TokenString);
                     WebClient.DefaultRequestHeaders.Add("Authorization", $"{Token.TokenType} {Token.AccessToken}");
                     IsAuthorized = true;
                 }
@@ -67,7 +69,7 @@ namespace FenixAlliance.SDK.Services
                     var TokenRequest = await client.GetAsync(AuthEndpoint);
                     TokenRequest.EnsureSuccessStatusCode();
                     var TokenString = await TokenRequest.Content.ReadAsStringAsync();
-                    Response = Deserialize.FromJson<JsonWebToken>(TokenString);
+                    Response = JsonSerializer.Deserialize<JsonWebToken>(TokenString);
                 }
             }
             catch (Exception e)

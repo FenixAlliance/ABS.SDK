@@ -14,7 +14,9 @@ namespace FenixAlliance.SDK.Helpers
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().Equals("name"))
+                    {
                         return claim.Value.ToString();
+                    }
                 }
             }
             return "";
@@ -29,8 +31,9 @@ namespace FenixAlliance.SDK.Helpers
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().Contains("nameidentifier"))
+                    {
                         return claim.Value.ToString();
-
+                    }
                 }
             }
             return "";
@@ -44,7 +47,9 @@ namespace FenixAlliance.SDK.Helpers
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().Contains("newUser"))
+                    {
                         return claim.Value;
+                    }
                 }
             }
             return "";
@@ -58,8 +63,9 @@ namespace FenixAlliance.SDK.Helpers
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().Contains("surname"))
+                    {
                         return claim.Value.ToString();
-
+                    }
                 }
             }
             return "";
@@ -73,8 +79,9 @@ namespace FenixAlliance.SDK.Helpers
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().Contains("givenname"))
+                    {
                         return claim.Value.ToString();
-
+                    }
                 }
             }
             return "";
@@ -88,8 +95,9 @@ namespace FenixAlliance.SDK.Helpers
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().Contains("jobTitle"))
+                    {
                         return claim.Value.ToString();
-
+                    }
                 }
             }
             return "";
@@ -103,8 +111,9 @@ namespace FenixAlliance.SDK.Helpers
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().Contains("country"))
+                    {
                         return claim.Value.ToString();
-
+                    }
                 }
             }
             return "";
@@ -119,7 +128,9 @@ namespace FenixAlliance.SDK.Helpers
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().Contains("email"))
+                    {
                         return claim.Value.ToString();
+                    }
                 }
             }
             return "";
@@ -133,7 +144,9 @@ namespace FenixAlliance.SDK.Helpers
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().ToLower().Contains("identityprovider"))
+                    {
                         return claim.Value.ToString();
+                    }
                 }
             }
             return "";
@@ -147,7 +160,9 @@ namespace FenixAlliance.SDK.Helpers
                 foreach (Claim claim in User.Claims)
                 {
                     if (claim.Type.ToString().ToLower().Contains("token"))
+                    {
                         return claim.Value.ToString();
+                    }
                 }
             }
             return "";

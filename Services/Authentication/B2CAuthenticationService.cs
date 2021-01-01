@@ -103,8 +103,10 @@ namespace FenixAlliance.Passport.Pocket.Services.Authentication
                 await PCA.RemoveAsync(accounts.FirstOrDefault());
                 accounts = await PCA.GetAccountsAsync();
             }
-            var signedOutContext = new UserContext();
-            signedOutContext.IsLoggedOn = false;
+            var signedOutContext = new UserContext
+            {
+                IsLoggedOn = false
+            };
             return signedOutContext;
         }
 
@@ -113,7 +115,10 @@ namespace FenixAlliance.Passport.Pocket.Services.Authentication
             foreach (var account in accounts)
             {
                 string userIdentifier = account.HomeAccountId.ObjectId.Split('.')[0];
-                if (userIdentifier.EndsWith(policy.ToLower())) return account;
+                if (userIdentifier.EndsWith(policy.ToLower()))
+                {
+                    return account;
+                }
             }
 
             return null;

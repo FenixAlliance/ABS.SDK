@@ -8,6 +8,7 @@ namespace FenixAlliance.SDK.Helpers
     public class EmailHelpers
     {
         private readonly IConfiguration _configuration;
+
         public EmailHelpers(IConfiguration configuration)
         {
             _configuration = configuration;
