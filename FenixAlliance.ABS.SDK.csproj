@@ -5,7 +5,7 @@
     <Authors>Fenix Alliance Group</Authors>
     <Product>FenixAlliance.ABS.SDK</Product>
     <PackageId>FenixAlliance.ABS.SDK</PackageId>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>Alliance Business Suite C# SDK (.Net Standard 2.0)</Description>
@@ -13,22 +13,12 @@
     <PackageProjectUrl>https://github.com/FenixAlliance/ABS.SDK</PackageProjectUrl>
     <RepositoryUrl>https://github.com/FenixAlliance/ABS.SDK</RepositoryUrl>
     <PackageIconUrl>https://fenixalliance.com.co/images/FenixAlliance/AppIcon/apple-icon-120x120.png</PackageIconUrl>
-    <Version>1.0.9</Version>
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="JWT" Version="7.2.2" />
-    <PackageReference Include="Sendgrid" Version="9.21.0" />
-    <PackageReference Include="MongoDB.Bson" Version="2.11.3" />
-    <PackageReference Include="MongoDB.Driver" Version="2.11.3" />
-    <PackageReference Include="Microsoft.Identity.Client" Version="4.21.1" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.1.9" />
-    <PackageReference Include="FenixAlliance.ABM.Models.DTOs" Version="1.0.4" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
-    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="3.1.9" />
-    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.9" />
+    <PackageReference Include="Sendgrid" Version="9.22.0" />
+    <PackageReference Include="FenixAlliance.ABM.Hub" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

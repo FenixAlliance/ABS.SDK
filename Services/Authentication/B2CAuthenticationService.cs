@@ -19,7 +19,7 @@ namespace FenixAlliance.Passport.Pocket.Services.Authentication
             // default redirectURI; each platform specific project will have to override it with its own
             PCA = PublicClientApplicationBuilder.Create(B2CConstants.ClientID)
                 .WithB2CAuthority(B2CConstants.AuthoritySignInSignUp)
-                .WithIosKeychainSecurityGroup(B2CConstants.IOSKeyChainGroup)
+                //.WithIosKeychainSecurityGroup(B2CConstants.IOSKeyChainGroup)
                 .WithRedirectUri($"msal{B2CConstants.ClientID}://auth")
                 .Build();
         }
@@ -57,7 +57,7 @@ namespace FenixAlliance.Passport.Pocket.Services.Authentication
             AuthenticationResult authResult = await PCA.AcquireTokenInteractive(B2CConstants.Scopes)
                 .WithPrompt(Prompt.NoPrompt)
                 .WithAuthority(B2CConstants.AuthorityPasswordReset)
-                .WithParentActivityOrWindow(ParentActivityOrWindow)
+                //.WithParentActivityOrWindow(ParentActivityOrWindow)
                 .ExecuteAsync();
 
             var userContext = UpdateUserInfo(authResult);
@@ -73,7 +73,7 @@ namespace FenixAlliance.Passport.Pocket.Services.Authentication
                 .WithAccount(GetAccountByPolicy(accounts, B2CConstants.PolicyEditProfile))
                 .WithPrompt(Prompt.NoPrompt)
                 .WithAuthority(B2CConstants.AuthorityEditProfile)
-                .WithParentActivityOrWindow(ParentActivityOrWindow)
+                //.WithParentActivityOrWindow(ParentActivityOrWindow)
                 .ExecuteAsync();
 
             var userContext = UpdateUserInfo(authResult);
@@ -87,7 +87,7 @@ namespace FenixAlliance.Passport.Pocket.Services.Authentication
 
             AuthenticationResult authResult = await PCA.AcquireTokenInteractive(B2CConstants.Scopes)
                 .WithAccount(GetAccountByPolicy(accounts, B2CConstants.PolicySignUpSignIn))
-                .WithParentActivityOrWindow(ParentActivityOrWindow)
+                //.WithParentActivityOrWindow(ParentActivityOrWindow)
                 .ExecuteAsync();
 
             var newContext = UpdateUserInfo(authResult);
