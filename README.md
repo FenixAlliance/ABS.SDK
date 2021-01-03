@@ -25,7 +25,7 @@ Both client and server code is written in C#, allowing users to extend the produ
 [[_TOC_]]
 
 
-## What we want to leverage our applications.
+## Meet the Alliance Business Creed
 
 We want to give you the power to harness your entire potential through technology, without having to worry about any of the complexity and technical aspects. We simply want to help you make your life easier while increasing your odds for success through the right tools and support on the path to digitalization.
 
@@ -431,7 +431,7 @@ Give an ⭐️ if this project helped you!
 # Legal Notices
 
 Fenix Alliance and any contributors grant you a license to the ABM documentation and other content
-in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), and grant you a license to any code in the repository under the [ABS EULA](http://docs.fenix-alliance.com).
+in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), and grant you a license to any code in the repository under the [ABS EULA](http://absuite.net/eula).
 
 Fenix Alliance, Alliance Business Suite, Infinity Comex, and/or other Fenix Alliance's products and services referenced in the documentation may be either trademarks or registered trademarks of Fenix Alliance Inc. in the United States and/or other countries. The licenses for this project do not grant you rights to use any of Fenix Alliance's names, logos, or trademarks. Fenix Alliance's general trademark guidelines can be found at http://docs.fenix-alliance.com.
 

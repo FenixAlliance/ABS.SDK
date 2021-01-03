@@ -1,24 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Version>1.1.0</Version>
     <Company>Fenix Alliance Inc.</Company>
     <Authors>Fenix Alliance Group</Authors>
-    <Product>FenixAlliance.ABS.SDK</Product>
-    <PackageId>FenixAlliance.ABS.SDK</PackageId>
+    <NeutralLanguage>en-US</NeutralLanguage>
     <TargetFramework>net5.0</TargetFramework>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Description>Alliance Business Suite C# SDK (.Net Standard 2.0)</Description>
-    <Copyright>© 2009 - 2020 Fenix Alliance Inc. All rights reserved.</Copyright>
-    <PackageProjectUrl>https://github.com/FenixAlliance/ABS.SDK</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/FenixAlliance/ABS.SDK</RepositoryUrl>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <RequireLicenseAcceptance>true</RequireLicenseAcceptance>
+    <PackageProjectUrl>https://absuite.net</PackageProjectUrl>
+    <PackageLicenseUrl>https://absuite.net/eula</PackageLicenseUrl>
+    <Copyright>© 2009 - 2021 Fenix Alliance Inc. All rights reserved.</Copyright>
     <PackageIconUrl>https://fenixalliance.com.co/images/FenixAlliance/AppIcon/apple-icon-120x120.png</PackageIconUrl>
-    <Version>1.0.0</Version>
+    <RepositoryUrl>https://github.com/FenixAlliance/ABS.Portal</RepositoryUrl>
+    <PackageTags>Alliance Business Suite, Fenix Alliance, ABS</PackageTags>
+    <Description>Application Component for the Alliance Business Suite.</Description>
+    <PackageReleaseNotes>Standarize at v1.1.0</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Sendgrid" Version="9.22.0" />
-    <PackageReference Include="FenixAlliance.ABM.Hub" Version="1.0.0" />
+    <PackageReference Include="FenixAlliance.ABM.Hub" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>
