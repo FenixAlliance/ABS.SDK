@@ -403,7 +403,7 @@ The Alliance Conversational Services Bot Maker Platform is an ABS extension that
 
 # Versioning
 
-Maintaining forward and backward compatibility is a key goal of the ABS. Therefore, the ABS uses only additive versioning, which means any revision of the ABM following the "1.0" release will not:
+Maintaining forward and backward compatibility is a key goal of the ABS. Therefore, the ABS uses only additive versioning, which means any revision of the ABM following the "2.0" release will not:
 
 * Introduce new mandatory attributes on previously published entities, or change an optional attribute to be mandatory
 * Rename previously published attributes or entities
