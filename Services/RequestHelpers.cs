@@ -5,14 +5,14 @@ using System.Security.Claims;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using FenixAlliance.ABS.SDK.Interfaces;
 using FenixAlliance.Models.DTOs.Components.Commons;
 using FenixAlliance.Models.DTOs.Components.CRM;
 using FenixAlliance.Models.DTOs.Components.Social;
 using FenixAlliance.Models.DTOs.Components.Store.Carts;
 using FenixAlliance.Models.DTOs.Requests;
-using FenixAlliance.SDK.Interfaces;
 
-namespace FenixAlliance.SDK.Services
+namespace FenixAlliance.ABS.SDK.Services
 {
     public class RequestHelpers : IRequestHelpers
     {

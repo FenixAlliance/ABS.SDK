@@ -1,6 +1,6 @@
 ﻿using System.Security.Claims;
 
-namespace FenixAlliance.SDK.Helpers
+namespace FenixAlliance.ABS.SDK.Helpers
 {
     public class UserHelpers
     {

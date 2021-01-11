@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FenixAlliance.ABS.SDK.Interfaces;
 using Microsoft.Identity.Client;
 using Newtonsoft.Json.Linq;
 
-namespace FenixAlliance.Passport.Pocket.Services.Authentication
+namespace FenixAlliance.ABS.SDK.Services.Authentication
 {
     public class B2CAuthenticationService : IAuthenticationService
     {

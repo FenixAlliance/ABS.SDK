@@ -4,12 +4,12 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Threading.Tasks;
+using FenixAlliance.ABS.SDK.Interfaces;
 using FenixAlliance.Models.DTOs.Authorization;
-using FenixAlliance.SDK.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
-namespace FenixAlliance.SDK.Services
+namespace FenixAlliance.ABS.SDK.Services
 {
     public class AuthHelperService : IAuthorizationHelpers
     {

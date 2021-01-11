@@ -1,4 +1,4 @@
-﻿namespace FenixAlliance.Passport.Pocket.Services.Authentication
+﻿namespace FenixAlliance.ABS.SDK.Services.Authentication
 {
     public static class B2CConstants
     {

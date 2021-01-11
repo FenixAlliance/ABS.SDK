@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace FenixAlliance.Passport.Pocket.Services
+namespace FenixAlliance.ABS.SDK.Services
 {
     public interface IDataRepository<T>
     {

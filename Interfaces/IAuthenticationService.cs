@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
+using FenixAlliance.ABS.SDK.Services.Authentication;
 
-namespace FenixAlliance.Passport.Pocket.Services.Authentication
+namespace FenixAlliance.ABS.SDK.Interfaces
 {
     public interface IAuthenticationService
     {

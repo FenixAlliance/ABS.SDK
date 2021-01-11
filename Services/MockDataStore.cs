@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using FenixAlliance.Models.DTOs.Components.Store;
 using Newtonsoft.Json;
 
-namespace FenixAlliance.Passport.Pocket.Services
+namespace FenixAlliance.ABS.SDK.Services
 {
     public class MockDataStore : IDataRepository<Product>
     {
