@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Icon>Icon.png</Icon>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
     <language>en-US</language>
     <LangVersion>latest</LangVersion>
     <PackageIcon>Icon.png</PackageIcon>
@@ -18,7 +18,7 @@
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageProjectUrl>https://absuite.net</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Copyright>Ãƒâ€šÃ‚Â© 2009 - 2021 Fenix Alliance Inc. All rights reserved.</Copyright>
+    <Copyright>ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© 2009 - 2021 Fenix Alliance Inc. All rights reserved.</Copyright>
     <PackageTags>Alliance Business Suite; Fenix Alliance, ABS, ABM; ABP; ACL; APS; ACS;</PackageTags>
     <PackageIconUrl>https://fenixalliance.com.co/images/FenixAlliance/AppIcon/apple-icon-120x120.png</PackageIconUrl>
     <PackageReleaseNotes>Standarize at v1.1.1</PackageReleaseNotes>
