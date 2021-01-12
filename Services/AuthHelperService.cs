@@ -4,8 +4,8 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Threading.Tasks;
+using FenixAlliance.ABM.Models.DTOs.Authorization;
 using FenixAlliance.ABS.SDK.Interfaces;
-using FenixAlliance.Models.DTOs.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 

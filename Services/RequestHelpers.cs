@@ -6,11 +6,11 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using FenixAlliance.ABS.SDK.Interfaces;
-using FenixAlliance.Models.DTOs.Components.Commons;
-using FenixAlliance.Models.DTOs.Components.CRM;
-using FenixAlliance.Models.DTOs.Components.Social;
-using FenixAlliance.Models.DTOs.Components.Store.Carts;
-using FenixAlliance.Models.DTOs.Requests;
+using FenixAlliance.ABM.Models.DTOs.Components.Accounting.Billing;
+using FenixAlliance.ABM.Models.DTOs.Components.Contacts;
+using FenixAlliance.ABM.Models.DTOs.Components.Social;
+using FenixAlliance.ABM.Models.DTOs.Components.Store.Carts;
+using FenixAlliance.ABM.Models.DTOs.Requests.Store;
 
 namespace FenixAlliance.ABS.SDK.Services
 {

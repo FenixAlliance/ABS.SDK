@@ -1,27 +1,41 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Version>1.1.0</Version>
+    <Icon>Icon.png</Icon>
+    <Version>1.1.1</Version>
+    <language>en-US</language>
+    <LangVersion>latest</LangVersion>
+    <PackageIcon>Icon.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
     <Company>Fenix Alliance Inc.</Company>
     <Authors>Fenix Alliance Group</Authors>
+    <MinClientVersion>2.8</MinClientVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
+    <RepositoryBranch>main</RepositoryBranch>
     <TargetFramework>net5.0</TargetFramework>
-    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <DevelopmentDependency>false</DevelopmentDependency>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
-    <RequireLicenseAcceptance>true</RequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <DevelopmentDependency>false</DevelopmentDependency>
     <PackageProjectUrl>https://absuite.net</PackageProjectUrl>
-    <PackageLicenseUrl>https://absuite.net/eula</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Copyright>© 2009 - 2021 Fenix Alliance Inc. All rights reserved.</Copyright>
+    <PackageTags>Alliance Business Suite; Fenix Alliance, ABS, ABM; ABP; ACL; APS; ACS;</PackageTags>
     <PackageIconUrl>https://fenixalliance.com.co/images/FenixAlliance/AppIcon/apple-icon-120x120.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/FenixAlliance/ABS.Portal</RepositoryUrl>
-    <PackageTags>Alliance Business Suite, Fenix Alliance, ABS</PackageTags>
+
+    <PackageReleaseNotes>Standarize at v1.1.1</PackageReleaseNotes>
     <Description>Application Component for the Alliance Business Suite.</Description>
-    <PackageReleaseNotes>Standarize at v1.1.0</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/FenixAlliance/ABS.SDK</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="Icon.png" Pack="True" PackagePath="" />
+    <None Include="LICENSE.md" Pack="True" PackagePath="" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Sendgrid" Version="9.22.0" />
-    <PackageReference Include="FenixAlliance.ABM.Hub" Version="1.1.0" />
+    <PackageReference Include="FenixAlliance.ABM.Hub" Version="1.1.1" />
   </ItemGroup>
 
   <ItemGroup>

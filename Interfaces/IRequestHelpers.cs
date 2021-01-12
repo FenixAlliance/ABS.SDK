@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
-using FenixAlliance.Models.DTOs.Components.Commons;
-using FenixAlliance.Models.DTOs.Components.CRM;
-using FenixAlliance.Models.DTOs.Components.Social;
-using FenixAlliance.Models.DTOs.Components.Store.Carts;
+using FenixAlliance.ABM.Models.DTOs.Components.Accounting.Billing;
+using FenixAlliance.ABM.Models.DTOs.Components.Contacts;
+using FenixAlliance.ABM.Models.DTOs.Components.Social;
+using FenixAlliance.ABM.Models.DTOs.Components.Store.Carts;
+
 
 namespace FenixAlliance.ABS.SDK.Interfaces
 {
