@@ -1,5 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Icon>Icon.png</Icon>
     <Version>1.1.1</Version>
@@ -19,30 +18,26 @@
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageProjectUrl>https://absuite.net</PackageProjectUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Copyright>© 2009 - 2021 Fenix Alliance Inc. All rights reserved.</Copyright>
+    <Copyright>Ãƒâ€šÃ‚Â© 2009 - 2021 Fenix Alliance Inc. All rights reserved.</Copyright>
     <PackageTags>Alliance Business Suite; Fenix Alliance, ABS, ABM; ABP; ACL; APS; ACS;</PackageTags>
     <PackageIconUrl>https://fenixalliance.com.co/images/FenixAlliance/AppIcon/apple-icon-120x120.png</PackageIconUrl>
-
     <PackageReleaseNotes>Standarize at v1.1.1</PackageReleaseNotes>
     <Description>Application Component for the Alliance Business Suite.</Description>
     <RepositoryUrl>https://github.com/FenixAlliance/ABS.SDK</RepositoryUrl>
   </PropertyGroup>
-
   <ItemGroup>
     <None Include="Icon.png" Pack="True" PackagePath="" />
     <None Include="LICENSE.md" Pack="True" PackagePath="" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Sendgrid" Version="9.22.0" />
     <PackageReference Include="FenixAlliance.ABM.Hub" Version="1.1.1" />
   </ItemGroup>
-
   <ItemGroup>
     <None Update="Icon.png">
       <Pack>True</Pack>
-      <PackagePath></PackagePath>
+      <PackagePath>
+      </PackagePath>
     </None>
   </ItemGroup>
-
 </Project>
