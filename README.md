@@ -20,10 +20,7 @@ The Alliance Business Suite gives users a Full-Stack, Modular Application Framew
 
 Both client and server code is written in C#, allowing users to extend the product with their own code through Module libraries. It builds upon next-generation technologies such as Blazor, SignalR, Razor Pages, and MVC through ASP.NET Core, an open-source and cross-platform web UI framework for building web apps using .NET and C# with or without the use of JavaScript.
 
- ABS Apps are composed of reusable web UI components implemented using C#, HTML, and CSS. 
-
-[[_TOC_]]
-
+ABS Apps are composed of reusable web UI components implemented using C#, HTML, and CSS. 
 
 ## Meet the Alliance Business Creed
 
@@ -261,15 +258,15 @@ There is a separate [Documentation repository](https://github.com/fenixalliance/
 # Roadmap
 This project is a work in progress and the schedule for implementing enhancements is dependent upon the availability of community members who are willing/able to assist.
 
-V.2.0.0 ( released in 2021 T4 )
+V.2.0.0 ( release in 2021 T4 )
 - [ ] Migration to .NET 6
 
-V.1.7.5 ( released in 2021 T3 )
+V.1.7.5 ( release in 2021 T3 )
 - [ ] UBL 2.1 Support
 - [ ] Process Canvas.
 - [ ] PowerShell SDK 
 
-V.1.5.0 ( released in 2021 T2 )
+V.1.5.0 ( release in 2021 T2 )
 - [ ] gRPC Modularization
 - [ ] Reporting Dashboard
 - [ ] Dynamic Dashboards
@@ -277,7 +274,7 @@ V.1.5.0 ( released in 2021 T2 )
 - [ ] gRPC Modularization
 - [ ] ACS Modularization
 
-V.1.2.5 ( released in 2021 T1 )
+V.1.2.5 ( release in 2021 T1 )
 - [ ] Static Localization ( ie. labels, help text, etc.. )
 - [ ] ARIA Tags Integration for Studio
 - [ ] ComputeWorks Cloud Platform Integration
