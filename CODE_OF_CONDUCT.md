@@ -43,7 +43,7 @@ We encourage everyone to participate and are committed to building a community f
 
 ### [](https://github.com/todogroup/opencodeofconduct/blob/gh-pages/index.md#reporting-issues)Reporting Issues
 
-If you experience or witness unacceptable behavior—or have any other concerns—please report it by contacting us via [**AllianceIDHolder@fenix-alliance.com**](mailto:AllianceIDHolder@fenix-alliance.com). All reports will be handled with discretion. In your report please include:
+If you experience or witness unacceptable behavior—or have any other concerns—please report it by contacting us via [**AccountHolder@fenix-alliance.com**](mailto:AccountHolder@fenix-alliance.com). All reports will be handled with discretion. In your report please include:
 
 *   Your contact information.
 *   Names (real, nicknames, or pseudonyms) of any individuals involved. If there are additional witnesses, please include them as well. Your account of what occurred, and if you believe the incident is ongoing. If there is a publicly available record (e.g. a mailing list archive or a public IRC logger), please include a link.
