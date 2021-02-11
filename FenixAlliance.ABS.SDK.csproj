@@ -113,5 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FenixAlliance.ACL.Dependencies" Version="1.1.2" />
+    <PackageReference Include="Radzen.Blazor" Version="3.0.8" />
   </ItemGroup>
 </Project>
