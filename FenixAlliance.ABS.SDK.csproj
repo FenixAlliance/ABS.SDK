@@ -11,7 +11,7 @@
     <MinClientVersion>2.8</MinClientVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
     <RepositoryBranch>main</RepositoryBranch>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <DevelopmentDependency>false</DevelopmentDependency>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
@@ -113,6 +113,5 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="FenixAlliance.ACL.Dependencies" Version="1.1.2" />
-    <PackageReference Include="Radzen.Blazor" Version="3.0.8" />
   </ItemGroup>
 </Project>

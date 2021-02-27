@@ -11,7 +11,7 @@
     <MinClientVersion>2.8</MinClientVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
     <RepositoryBranch>main</RepositoryBranch>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <DevelopmentDependency>false</DevelopmentDependency>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
