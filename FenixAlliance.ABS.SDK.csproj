@@ -111,7 +111,4 @@
     <None Include="Icon.png" Pack="True" PackagePath="" />
     <None Include="LICENSE.md" Pack="True" PackagePath="" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="FenixAlliance.ACL.Dependencies" Version="1.1.2" />
-  </ItemGroup>
 </Project>
