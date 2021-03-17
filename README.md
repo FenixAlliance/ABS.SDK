@@ -13,8 +13,9 @@
   </a>
 </p>
 
+Welcome to the Alliance Business Suite!
 
-The Alliance Business Suite is a set of intelligent, extensible, multi-tenant business applications that enable users to accelerate their business through the acceleration of several core aspects of any given business.
+The Alliance Business Suite is a set of intelligent, extensible, multi-tenant business applications that enable users to jumpstart your business through the acceleration of several core aspects of any given business.
 
 The Alliance Business Suite gives users a Full-Stack, Modular Application Framework built on top of the [Alliance Business Platform](https://absuite.net). 
 
@@ -22,75 +23,71 @@ Both client and server code is written in C#, allowing users to extend the produ
 
 ABS Apps are composed of reusable web UI components implemented using C#, HTML, and CSS. 
 
-## Meet the Alliance Business Creed
+## About the Alliance Business Creed
 
-We want to give you the power to harness your entire potential by leveraging word-class technologies, without having to worry about any of the complexity and technical aspects. We simply want to help you make your life easier while increasing your odds for success through the right tools and support on the path to digitalization.
+We're designed to succeed when you and your business succeed; that's why we're commited to help as much people as possible to harness their entire potential. By building on top of word-class technologies, we're designing this solution to jumpstart your business without having to worry about any of the complexity and technical aspects. We simply want to help you make your life easier while increasing your odds for success through the right tools and support on the path to digitalization.
 
-The fact is, since our inception, we've steered towards creating culture designed to reach beyond expectations together by building an organization whos success strategy cis to help others to succeed.
+The fact is, since our inception, we've steered towards creating culture designed to reach beyond expectations together by building an organization whos success strategy is to help others to succeed.
 
-### Where we are on the stage?
+### Well when. What do I get?
 We are creating our applications in such a form that they deliver as much value to your business and cause as we can. They work primarily as an interface for users to manage their services, products, and cloud resources. But the truth is that isn't limited to just that.
 
 Our applications are being developed to give you access to every functionality that we implement for our business, to power your business and vision as well. This is because if we can add value to our business and gain a competitive advantage through these tools, chances are you can too!
 
-### How to get started?
-To get started, you will need to create an Alliance ID account. Now, you may think... 🙄 another account? But don't worry. Creating your Alliance ID Account is (and will always be) free, takes just a few seconds and you don't even need a password (unless you want to have one). This account will give you instant access to everything else at Fenix Alliance Group.
+So far, we've created a few extensions and connectors for the Alliance Business Suite, but you can extend it too! Some of these extensions are open source, so feel free to chech their code for extension reference.
+
+Connectors are always free and you can find them in your ABS Extensions page, and some of our extensions have free tiers. You will get the Alliance Business Suite Community Edition, for free, with the following Modules:
+
+- ABS ContactSight. (CRM)
+- ABS Content Portals (CMS)
+- ABS Accounting. (AMS)
+- ABS Social Networks. (Intranet Social Network)
+- ABS IAM (Identity and Access Management)
+- Infinity Comex (eCommerce Engine)
+
+## How to get started?
+To get started, you will need to create an Alliance ID account. Now, you may think... 🙄 another account? But don't worry. Creating your Alliance ID Account is (and will always be) free, takes just a few seconds and you don't even need a password (unless you wanna have one). This account will give you instant access to everything else at Fenix Alliance Group.
 
 A note about your account and the privacy of your information.
-The Alliance ID Accounts engine is built on top of a highly compliant service to keep your identity private. This engine supports Facebook, Microsoft Accounts, Google+, LinkedIn, and many other identity providers, or you can integrate your own.
+The Alliance ID Accounts engine - Alliance Passport Services - is built on top of a highly compliant service to keep your identity private. This engine supports Facebook, Microsoft Accounts, Google+, LinkedIn, and many other identity providers, or you can integrate your own.
 
 We think that it's also worth pointing out that we DO NOT store any identity information into our databases; instead, that data is always encrypted and sent to the same systems that governments and enterprises worldwide are using to keep your data safe, and then we access that data by using industry-standard protocols so that you can rest assured that your sensitive information is protected through various security controls in addition to multi-factor authentication.
 
 To learn more about our privacy policy, please visit: https://fenixalliance.com.co/legal/policies/privacypolicy 
 
-About this Wiki
-Tagging system
 
-| Tag	 | Meaning |
-|--|--|
-| ACL |	Alliance Core Libraries |
-| APS |	Alliance Passport Services |
-| ACS |	Alliance Conversational Services |
-| ABS |	Alliance Business Suite |
-| ABP |	Alliance Business Platform |
-| ABM |	Alliance Business Model|
-| ABS Portal | Alliance Business Suite Portal |
-| ABS Studio | Alliance Business Suite Studio |
-| AID |	Alliance ID Level | 
-| UI |	User Interface |
-| UX |	User Experience |
-| Core |  Core Functionality |
-| REST | REST API |
-| GRPC | GRPC API |
-| GraphQl | GraphQl API |
+<br >
 
-
-#### ABS requirements:
+### ABS requirements:
  - MS SQL Server or My SQL, 
- - MongoDB to manage state.
+ - .NET 6.0 (Latest preview release)
 
+<br >
 
+### User Guide
+- [ABS Documentation](https://docs.fenixalliance.com.co)
 
-- [User Guide](https://docs.fenixalliance.com.co)
+<br >
+
 ---
 
-#### Easy Install
+### Easy Install
 
 The Easy Way: As a Docker Container.
-```sh
+```powershell
 docker pull FenixAlliance.ABS.Portal:latest
 ```
 
 #### Conventional Install
 
-```sh
-git clone https://github.com/FenixAlliance/ABS.Portal
+```powershell
+git clone https://github.com/FenixAlliance/ABS.Bin
 ```
-```sh
-cd ABS.Portal
+```powershell
+cd ABS.Bin
 ```
-```sh
-dotnet restore
+```powershell
+Get-Process 
 ```
 ```sh
 dotnet build --configuration Release
@@ -101,7 +98,7 @@ dotnet build --configuration Release
 Add the NuGet package
 
 ```sh
-dotnet add package FenixAlliance.ABS.Portal.Hub --version 1.0.0
+dotnet add package FenixAlliance.ABS.Portal.Hub --version 1.1.2
 ```
 
 ## Register Services and Configuration
@@ -115,11 +112,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace FenixAlliance.ABSP
+namespace FenixAlliance.ABS
 {
     public class Startup
     {
-        public SuiteOptions SuiteOptions = new ();
         public IConfiguration Configuration { get; }
         public IHostEnvironment Environment { get; set; }
 
@@ -128,17 +124,16 @@ namespace FenixAlliance.ABSP
         {
             this.Environment = Environment;
             this.Configuration = Configuration;
-            Configuration.Bind(SuiteOptions);
         }
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAllianceBusinessSuite(Configuration, Environment, SuiteOptions);
+            services.AddAllianceBusinessSuite(Configuration, Environment);
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
-            app.UseAllianceBusinessSuite(Configuration, Environment, SuiteOptions);
+            app.UseAllianceBusinessSuite(Configuration, Environment);
         }
     }
 }
@@ -155,7 +150,7 @@ namespace FenixAlliance.ABSP
   <a href="http://absuite.net/eula" target="_blank">
     <img alt="License: ABS EULA" src="https://img.shields.io/static/v1?label=License&message=ABS%20EULA&color=blue" />
   </a>
-  <img alt="GitHub Workflow Status" src="https://github.com/fenixalliance/ACL.Configuration/workflows/.NET/badge.svg">
+  <img alt="GitHub Workflow Status" src="https://github.com/fenixalliance/ABM.Hub/workflows/.NET/badge.svg">
 </p>
 
 The Alliance Business Model is a declarative specification and definition of standard entities that represent commonly used concepts and activities across business and productivity applications and is being extended to observational and analytical data as well. ABM provides well-defined, modular, and extensible business entities such as Account, Business Unit, Case, Contact, Lead, Opportunity, and Items (Products/Services), as well as interactions with vendors, workers, and customers, such as activities and service level agreements. that serve as the dynamic data layer for the entire Alliance Business Suite.
@@ -424,19 +419,6 @@ Contributions, issues, and feature requests are welcome!<br />Feel free to check
 Give an ⭐️ if this project helped you!
 
 
-
-# Legal Notices
-
-Fenix Alliance and any contributors grant you a license to the ABM documentation and other content
-in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), and grant you a license to any code in the repository under the [ABS EULA](http://absuite.net/eula).
-
-Fenix Alliance, Alliance Business Suite, Infinity Comex, and/or other Fenix Alliance's products and services referenced in the documentation may be either trademarks or registered trademarks of Fenix Alliance Inc. in the United States and/or other countries. The licenses for this project do not grant you rights to use any of Fenix Alliance's names, logos, or trademarks. Fenix Alliance's general trademark guidelines can be found at http://docs.fenix-alliance.com.
-
-Privacy information can be found at https://fenix-alliance.com/legal/policies/privacypolicy
-
-Fenix Alliance and any contributors reserve all other rights, whether under their respective copyrights, patents,
-or trademarks, whether by implication, estoppel, or otherwise.
-
 ## Author
 
 👤 **Fenix Alliance Inc.**
@@ -471,3 +453,13 @@ The Alliance Passport Services engine is built on top of a highly compliant serv
 We think that it's also worth pointing out that we DO NOT store any identity information into our databases; instead, that data is always encrypted and sent to the same systems that governments and enterprises worldwide are using to keep your data safe, and then we access that data by using industry-standard protocols so that you can rest assured that your sensitive information is protected through various security controls in addition to multi-factor authentication.
 
 To learn more about our privacy policy, please visit: https://fenixalliance.com.co/legal/policies/privacypolicy 
+
+# Legal Notices
+
+Fenix Alliance and any contributors grant you a license to the documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), and grant you a license to any code in the repository under the [ABS EULA](http://absuite.net/eula).
+
+Fenix Alliance, Alliance Business Suite, Infinity Comex, and/or other Fenix Alliance's products and services referenced in the documentation may be either trademarks or registered trademarks of Fenix Alliance Inc. in the United States and/or other countries. The licenses for this project do not grant you rights to use any of Fenix Alliance's names, logos, or trademarks. Fenix Alliance's general trademark guidelines can be found at http://docs.fenix-alliance.com.
+
+Privacy information can be found at https://fenix-alliance.com/legal/policies/privacypolicy
+
+Fenix Alliance and any contributors reserve all other rights, whether under their respective copyrights, patents, or trademarks, whether by implication, estoppel, or otherwise.
