@@ -104,20 +104,20 @@ dotnet add package FenixAlliance.ABS.Portal.Hub --version 1.1.2
 ## Register Services and Configuration
 
 ```cs
-using FenixAlliance.ABS.Portal.Core;
-using FenixAlliance.Extensions;
+using FenixAlliance.ABS.Core.Extensions;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 
 namespace FenixAlliance.ABS
 {
     public class Startup
     {
-        public IConfiguration Configuration { get; }
         public IHostEnvironment Environment { get; set; }
+        public IConfiguration Configuration { get; }
 
         // Constructor
         public Startup(IConfiguration Configuration, IHostEnvironment Environment)
@@ -126,14 +126,16 @@ namespace FenixAlliance.ABS
             this.Configuration = Configuration;
         }
 
+        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAllianceBusinessSuite(Configuration, Environment);
+          services.AddAllianceBusinessSuite(Configuration, Environment);
         }
 
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app)
         {
-            app.UseAllianceBusinessSuite(Configuration, Environment);
+          app.UseAllianceBusinessSuite(Configuration, Environment);
         }
     }
 }
