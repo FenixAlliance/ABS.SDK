@@ -4,19 +4,72 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.1.2] - 2014-08-09
+
+## [1.1.3] - 2021-04-09
+### Added
+- Radzen.Blazor is now a project dependency. 
+- RabbitMQ.Client is now a project dependency. 
+- Fluid.Core is now a project dependency. 
+- FluentValidation is now a project dependency. 
+- NuGet.Packaging is now a project dependency. 
+- FluentEmail.Core is now a project dependency. 
+- Flurl.Http is now a project dependency. 
+- Standard.Licensing is now a project dependency. 
+- NodaTime is now a project dependency. 
+- Serilog is now a project dependency. 
+- Autofac is now a project dependency. 
+- CsvHelper is now a project dependency. 
+- Dapper is now a project dependency. 
+- AngleSharp is now a project dependency. 
+- IdentityServer4 is now a project dependency. 
+- DotLiquid is now a project dependency. 
+- Emitter is now a project dependency. 
+- MediatR is now a project dependency. 
+- SixLabors.ImageSharp.Web is now a project dependency. 
+- RazorLight is now a project dependency. 
+- MassTransit is now a project dependency. 
+- ZXing.Net is now a project dependency. 
+- Z.EntityFramework.Plus.EFCore is now a project dependency. 
+### Changed
+- Fix error where plugin assembly paths always returned null (IPluginManager Implementation)
+
+
+## [1.1.2] - 2021-02-23
 ### Added
 - Adds ABP Proxy
 - Missing ACL configuration Types
+- ABS Extensions Gallery
+- ABS Extensions Installer
+- ABS Web Installer
+- ABS Admin Portal
+- Dynamic Web Page/Post creation
+- Assembly Explorer
+- Roles and Permissions Explorer
+- Admin Dashboard Initials
+- Added support for SixLabors.ImageSharp.Web
+- Forex service data is now scraped by Fenix Alliance.
+- Data Services are not coded to a replaceable interface implementation.
+- ABS.Hub project now contains everything we need to create a new ABS Instance.
+- Added support for IdentityServer4 as a replacement for Alliance Passport Services.
+- ACL.Licensing is now a part of the Alliance Business Suite.
+
 
 ### Changed
 
 - Extracts interface for ACL configuration Types
 - ACS is now ABP.BotEngine
+- Plugin Manager is now losely coupled to IPluginManager
+- Adds File Manager and FileSystem Service
+- Adds antivirus scanning extension for FileSystem Service (Windows Defender)
+- AccountHolder is now the standard identity class.
+- Fix minor UI glitches and broken links.
+- Fix several bugs on application startup and related extensions.
 
 ### Removed
+- Data Helpers marked for deprecation.
+- ABS.Nucleus was deprecated and is no longer a part of this project.
 
-## [1.1.1] - 2014-08-09
+## [1.1.1] - 2021-01-20
 ### Added
 - Adds ABP Proxy
 - Adds Infinity Comex Support
