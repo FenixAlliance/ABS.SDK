@@ -4,34 +4,82 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.5] - 2021-04-22
+### Added
+- [ABS] View Precompilation
+- [ABS] Internal Plugin Support+
+- [ABS] Dynamic Portal Metadata
+- [ABS] Google Meta Tags Integration
+- [ABS] Google Analytics Integration
+- [ABS] Google Verification Code Integration
+- [ABS] Bing Verification Code Integration
+- [ABS] Pinterest Verification Code Integration
+- [ABS] Facebook Pixel Verification Code Integration
+- [ABS] ICX Taxonomies Creation Controllers/Views.
+
+### Changed
+- [ABP] Fix error while previewing files on File System Explorer.
+- [ICX] Fix error where new users got a 500 when visiting the store.
+- [ICX] Update Swiper to the latest version.
+- [ABS] Monaco editor now lives inside the project instead as an node module.
+### Removed
+- [ICX] Taxonomies Creation Controllers/Views.
+## [1.1.4] - 2021-04-13
+### Added
+- [ABS] Extension Updates Page
+- [ABS] Razor Templating Engine
+- [APS] Google Authentication
+- [APS] Facebook Authentication
+- [APS] Microsoft Authentication
+- [APS] Twitter Authentication
+- [APS] LinkedIn Authentication
+- [APS] Instagram Authentication
+- [APS] Github Authentication
+- [SEO] Zift 123 Analytics Script Integration
+- [SEO] Facebook Pixel Integration
+- [SEO] Facebook Chat Widget Integration
+- [SEO] Google Analytics integration
+- [SEO] Google Merchant Center integration
+- [SEO] Google Verification Code Integration
+- [SEO] Google Tag Manager Integration
+- [SEO] Bing Verification code integration
+- [SEO] Pinterest verification code integration 
+- [SEO] Dynamic Structured Metadata
+- [UI] Adds Off-Canvas Cart Slider
+- [UI] Dynamic Top Bar content
+- [UI] Logo size customization options
+- [UI] Footer Dynamic Content
+- [UI] Footer/Header Synamic styling
+
 
 ## [1.1.3] - 2021-04-09
 ### Added
-- Radzen.Blazor is now a project dependency. 
-- RabbitMQ.Client is now a project dependency. 
-- Fluid.Core is now a project dependency. 
-- FluentValidation is now a project dependency. 
-- NuGet.Packaging is now a project dependency. 
-- FluentEmail.Core is now a project dependency. 
-- Flurl.Http is now a project dependency. 
-- Standard.Licensing is now a project dependency. 
-- NodaTime is now a project dependency. 
-- Serilog is now a project dependency. 
-- Autofac is now a project dependency. 
-- CsvHelper is now a project dependency. 
-- Dapper is now a project dependency. 
-- AngleSharp is now a project dependency. 
-- IdentityServer4 is now a project dependency. 
-- DotLiquid is now a project dependency. 
-- Emitter is now a project dependency. 
-- MediatR is now a project dependency. 
-- SixLabors.ImageSharp.Web is now a project dependency. 
-- RazorLight is now a project dependency. 
-- MassTransit is now a project dependency. 
-- ZXing.Net is now a project dependency. 
-- Z.EntityFramework.Plus.EFCore is now a project dependency. 
+- [ACL] Radzen.Blazor is now a project dependency. 
+- [ACL] RabbitMQ.Client is now a project dependency. 
+- [ACL] Fluid.Core is now a project dependency. 
+- [ACL] FluentValidation is now a project dependency. 
+- [ACL] NuGet.Packaging is now a project dependency. 
+- [ACL] FluentEmail.Core is now a project dependency. 
+- [ACL] Flurl.Http is now a project dependency. 
+- [ACL] Standard.Licensing is now a project dependency. 
+- [ACL] NodaTime is now a project dependency. 
+- [ACL] Serilog is now a project dependency. 
+- [ACL] Autofac is now a project dependency. 
+- [ACL] CsvHelper is now a project dependency. 
+- [ACL] Dapper is now a project dependency. 
+- [ACL] AngleSharp is now a project dependency. 
+- [ACL] IdentityServer4 is now a project dependency. 
+- [ACL] DotLiquid is now a project dependency. 
+- [ACL] Emitter is now a project dependency. 
+- [ACL] MediatR is now a project dependency. 
+- [ACL] SixLabors.ImageSharp.Web is now a project dependency. 
+- [ACL] RazorLight is now a project dependency. 
+- [ACL] MassTransit is now a project dependency. 
+- [ACL] ZXing.Net is now a project dependency. 
+- [ACL] Z.EntityFramework.Plus.EFCore is now a project dependency. 
+
 ### Changed
-- Fix error where plugin assembly paths always returned null (IPluginManager Implementation)
+- [ABP] Fix error where plugin assembly paths always returned null (IPluginManager Implementation)
 
 
 ## [1.1.2] - 2021-02-23
