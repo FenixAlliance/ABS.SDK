@@ -25,18 +25,18 @@ ABS Apps are composed of reusable web UI components implemented using C#, HTML, 
 
 ## About the Alliance Business Creed
 
-We're designed to succeed when you and your business succeed; that's why we're commited to help as much people as possible to harness their entire potential. By building on top of word-class technologies, we're designing this solution to jumpstart your business without having to worry about any of the complexity and technical aspects. We simply want to help you make your life easier while increasing your odds for success through the right tools and support on the path to digitalization.
+We're designed to succeed when you and your business succeed; that's why we're committed to helping as many people as possible to harness their entire potential. By building on top of word-class technologies, we're designing this solution to jumpstart your business without having to worry about any of the complexity and technical aspects. We simply want to help you make your life easier while increasing your odds for success through the right tools and support on the path to digitalization.
 
-The fact is, since our inception, we've steered towards creating culture designed to reach beyond expectations together by building an organization whos success strategy is to help others to succeed.
+The fact is, since our inception, we've steered towards creating a culture designed to reach beyond expectations together by building an organization whose success strategy is to help others to succeed.
 
 ### Well when. What do I get?
 We are creating our applications in such a form that they deliver as much value to your business and cause as we can. They work primarily as an interface for users to manage their services, products, and cloud resources. But the truth is that isn't limited to just that.
 
 Our applications are being developed to give you access to every functionality that we implement for our business, to power your business and vision as well. This is because if we can add value to our business and gain a competitive advantage through these tools, chances are you can too!
 
-So far, we've created a few extensions and connectors for the Alliance Business Suite, but you can extend it too! Some of these extensions are open source, so feel free to chech their code for extension reference.
+So far, we've created a few extensions and connectors for the Alliance Business Suite, but you can extend it too! Some of these extensions are open source, so feel free to check their code for extension reference.
 
-Connectors are always free and you can find them in your ABS Extensions page, and some of our extensions have free tiers. You will get the Alliance Business Suite Community Edition, for free, with the following Modules:
+Connectors are always free and you can find them on your ABS Extensions page, and some of our extensions have free tiers. You will get the Alliance Business Suite Community Edition, for free, with the following Modules:
 
 - ABS ContactSight. (CRM)
 - ABS Content Portals (CMS)
@@ -86,11 +86,8 @@ git clone https://github.com/FenixAlliance/ABS.Bin
 ```powershell
 cd ABS.Bin
 ```
-```powershell
-Get-Process 
-```
 ```sh
-dotnet build --configuration Release
+./FenixAlliance.ABS.Studio.exe
 ```
 
 #### Usage
@@ -98,13 +95,13 @@ dotnet build --configuration Release
 Add the NuGet package
 
 ```sh
-dotnet add package FenixAlliance.ABS.Portal.Hub --version 1.1.2
+dotnet add package FenixAlliance.ABS.Hub --version latest
 ```
 
 ## Register Services and Configuration
 
 ```cs
-using FenixAlliance.ABS.Core.Extensions;
+using FenixAlliance.ABS.Hub.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.Extensions.Configuration;
@@ -200,7 +197,7 @@ It allows you to build ABP Single Page apps that can connect and transact to the
 
 With ABS Portals, users can create external-facing websites that allow employees, customers, partners, and others outside their organizations to sign in with a wide variety of identities, create and view data in the Alliance Business Model, or browse content anonymously. 
 
-These capabilities feature a revamped end-to-end experience for makers to quickly create a website and customize it with pages, layout, and content. Developers can reuse page designs through templates, add forms and views to display key data from the Alliance Business Model and publish to users.
+These capabilities feature a revamped end-to-end experience for makers to quickly create a website and customize it with pages, layout, and content. Developers can reuse page designs through templates, add forms and views to display key data from the Alliance Business Model, and publish it to users.
 
 Anyone can build on and extend the Alliance Business Portal to capture additional business-specific scenarios.
 
@@ -281,12 +278,12 @@ V.1.2.5 ( release in 2021 T1 )
 - [ ] Complete Static Localization of Studio
 - [ ] Live Web Designer Integration
 - [ ] Dynamic ABM Entity Extensions
-- [ ] Dynamic Entity Views
+- [x] Dynamic Entity Views
 - [ ] Live Form Builder
 - [ ] Virtual Entity Data Providers
 - [ ] Virtual Entity Data Sources
 - [ ] Custom Controller Definitions
-- [ ] Portal Settings Manager UI
+- [x] Portal Settings Manager UI
 - [ ] Custom Macro Definitions
 - [ ] Custom Setting Definitions
 - [ ] Custom Portal Profile Definitions
@@ -330,7 +327,7 @@ V.1.0.0 ( released in Dec 31, 2020 )
 - [x] JavaScript Lazy Loading
 - [x] Modular Architecture
 - [x] Multi-Currency Support
-- [x] Multi-Portal ( Monotlith & Microservice Distributed )
+- [x] Multi-Portal ( Monolith & Microservice Distributed )
 - [x] Multi-Tenant ( Shared Database & Isolated Database )
 - [x] Notifications / Email Delivery
 - [x] Notifications / SMTP Delivery
@@ -418,7 +415,7 @@ Contributions, issues, and feature requests are welcome!<br />Feel free to check
 
 ## Show your support
 
-Give an ⭐️ if this project helped you!
+Give this project a ⭐️ if this project helped you!
 
 
 ## Author
@@ -432,7 +429,7 @@ Give an ⭐️ if this project helped you!
 
 ## Logo and Trademark
 
-The brand name Alliance Business Suite and it's logos are trademarks of Fenix Alliance S.A.S in Colombia and Fenix Alliance Inc in other countries ("Fenix Alliance").
+The brand name Alliance Business Suite and its logos are trademarks of Fenix Alliance S.A.S in Colombia and Fenix Alliance Inc in other countries ("Fenix Alliance").
 
 Fenix Alliance owns and oversees the trademarks for the ABS name and logos. We have developed this trademark usage policy with the following goals in mind:
 
@@ -458,7 +455,7 @@ To learn more about our privacy policy, please visit: https://fenixalliance.com.
 
 # Legal Notices
 
-Fenix Alliance and any contributors grant you a license to the documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode), and grant you a license to any code in the repository under the [ABS EULA](http://absuite.net/eula).
+Fenix Alliance and any contributors grant you a license to the documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode) and grant you a license to any code in the repository under the [ABS EULA](http://absuite.net/eula).
 
 Fenix Alliance, Alliance Business Suite, Infinity Comex, and/or other Fenix Alliance's products and services referenced in the documentation may be either trademarks or registered trademarks of Fenix Alliance Inc. in the United States and/or other countries. The licenses for this project do not grant you rights to use any of Fenix Alliance's names, logos, or trademarks. Fenix Alliance's general trademark guidelines can be found at http://docs.fenix-alliance.com.
 

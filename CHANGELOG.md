@@ -3,8 +3,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## [1.1.5] - 2021-04-22
+## [1.1.6.x] - 2021-04-22
+### Added
+- [ABS] Template Views
+- [ABS] View Components
+- [ABS] Drag 'n Drop Live Editor. (Preview)
+## [1.1.5] - 2021-04-21
 ### Added
 - [ABS] View Precompilation
 - [ABS] Internal Plugin Support+
@@ -15,13 +19,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Bing Verification Code Integration
 - [ABS] Pinterest Verification Code Integration
 - [ABS] Facebook Pixel Verification Code Integration
-- [ABS] ICX Taxonomies Creation Controllers/Views.
+- [ABS] ICX Taxonomies Creation Blazor Pages.
+- [ACL] Store Configuration Objects.
+- [APS] External Authentication Provider configuration pages.
 
 ### Changed
 - [ABP] Fix error while previewing files on File System Explorer.
 - [ICX] Fix error where new users got a 500 when visiting the store.
 - [ICX] Update Swiper to the latest version.
 - [ABS] Monaco editor now lives inside the project instead as an node module.
+- [ICX] ICX Static Files audit, bundling & minification.
+- [ICX] Fix UI error on cart record addition/deletion.
+- [APS] Fix Auth Error: when users not belong to any tenant, they used to got a E500 on nested File Retrieval.
+- [ABM] Model Modification to support db-stored precompiled views.
 ### Removed
 - [ICX] Taxonomies Creation Controllers/Views.
 ## [1.1.4] - 2021-04-13
@@ -164,11 +174,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - i18n Enabled (Based on GeoAPI and Custom Settings)
 - Improved JavaScript reference support
 - In-App CLI (Studio Commander)
-- Infinity Comex Support (ABS' eCommerce Engine)
+- Infinity Comex Support (ABS eCommerce Engine)
 - JavaScript Lazy Loading
 - Modular Architecture
 - Multi-Currency Support
-- Multi-Portal ( Monotlith & Microservice Distributed )
+- Multi-Portal ( Monolith & Micro-Service Distributed )
 - Multi-Tenant ( Shared Database & Isolated Database )
 - Notifications / Email Delivery
 - Notifications / SMTP Delivery
