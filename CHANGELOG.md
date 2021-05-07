@@ -5,9 +5,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [1.1.6.x] - 2021-04-22
 ### Added
+- [ABS] Log Viewer
 - [ABS] Template Views
 - [ABS] View Components
 - [ABS] Drag 'n Drop Live Editor. (Preview)
+### Changed
+- [ABS] Fix http context access on IIS making installation process fail.
+- [ABS] Fix http context access on IIS when trying to create a new view.
+- [ABS] Fix http context access on IIS when trying to edit a new view.
+- [ABS] Fix http context access on IIS when trying to create a new post.
+- [ABS] Fix http context access on IIS when trying to edit a new post.
 ## [1.1.5] - 2021-04-21
 ### Added
 - [ABS] View Precompilation

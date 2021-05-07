@@ -15,7 +15,7 @@
 
 Welcome to the Alliance Business Suite!
 
-The Alliance Business Suite is a set of intelligent, extensible, multi-tenant business applications that enable users to jumpstart your business through the acceleration of several core aspects of any given business.
+The Alliance Business Suite is a set of intelligent, extensible, multi-tenant business applications that enable users to jumpstart their business through the acceleration of several core aspects of any given business.
 
 The Alliance Business Suite gives users a Full-Stack, Modular Application Framework built on top of the [Alliance Business Platform](https://absuite.net). 
 
@@ -45,24 +45,7 @@ Connectors are always free and you can find them on your ABS Extensions page, an
 - ABS IAM (Identity and Access Management)
 - Infinity Comex (eCommerce Engine)
 
-## How to get started?
-To get started, you will need to create an Alliance ID account. Now, you may think... 🙄 another account? But don't worry. Creating your Alliance ID Account is (and will always be) free, takes just a few seconds and you don't even need a password (unless you wanna have one). This account will give you instant access to everything else at Fenix Alliance Group.
-
-A note about your account and the privacy of your information.
-The Alliance ID Accounts engine - Alliance Passport Services - is built on top of a highly compliant service to keep your identity private. This engine supports Facebook, Microsoft Accounts, Google+, LinkedIn, and many other identity providers, or you can integrate your own.
-
-We think that it's also worth pointing out that we DO NOT store any identity information into our databases; instead, that data is always encrypted and sent to the same systems that governments and enterprises worldwide are using to keep your data safe, and then we access that data by using industry-standard protocols so that you can rest assured that your sensitive information is protected through various security controls in addition to multi-factor authentication.
-
 To learn more about our privacy policy, please visit: https://fenixalliance.com.co/legal/policies/privacypolicy 
-
-
-<br >
-
-### ABS requirements:
- - MS SQL Server or My SQL, 
- - .NET 6.0 (Latest preview release)
-
-<br >
 
 ### User Guide
 - [ABS Documentation](https://docs.fenixalliance.com.co)
@@ -89,7 +72,10 @@ cd ABS.Bin
 ```sh
 ./FenixAlliance.ABS.Studio.exe
 ```
-
+or
+```sh
+dotnet FenixAlliance.ABS.Studio.dll
+```
 #### Usage
 
 Add the NuGet package
