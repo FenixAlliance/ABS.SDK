@@ -441,7 +441,7 @@ To learn more about our privacy policy, please visit: https://fenixalliance.com.
 
 # Legal Notices
 
-Fenix Alliance and any contributors grant you a license to the documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode) and grant you a license to any code in the repository under the [ABS EULA](http://absuite.net/eula).
+Fenix Alliance and any contributors grant you a license to the documentation and other content in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode) and grant you a license to any code (in binary or source format) in this repository under the [ABS EULA](http://absuite.net/eula).
 
 Fenix Alliance, Alliance Business Suite, Infinity Comex, and/or other Fenix Alliance's products and services referenced in the documentation may be either trademarks or registered trademarks of Fenix Alliance Inc. in the United States and/or other countries. The licenses for this project do not grant you rights to use any of Fenix Alliance's names, logos, or trademarks. Fenix Alliance's general trademark guidelines can be found at http://docs.fenix-alliance.com.
 

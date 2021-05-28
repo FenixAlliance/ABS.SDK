@@ -23,3 +23,5 @@ The Alliance Passport Services engine is built on top of a highly compliant serv
 We think that it's also worth pointing out that we DO NOT store any identity information into our databases; instead, that data is always encrypted and sent to the same systems that governments and enterprises worldwide are using to keep your data safe, and then we access that data by using industry-standard protocols so that you can rest assured that your sensitive information is protected through various security controls in addition to multi-factor authentication.
 
 To learn more about our privacy policy, please visit: https://fenixalliance.com.co/legal/policies/privacypolicy 
+
+<iframe src="https://onedrive.live.com/embed?cid=0EEBDB75EADFE0F3&amp;resid=EEBDB75EADFE0F3%2120381&amp;authkey=AL4jFRU73QM73cY&amp;em=2" width="100%" height="1024px" frameborder="0">Esto es un documento de <a target="_blank" href="https://office.com" rel="noopener">Microsoft Office</a> incrustado con tecnología de <a target="_blank" href="https://office.com/webapps" rel="noopener">Office</a>.</iframe>
