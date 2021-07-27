@@ -111,4 +111,7 @@
     <None Include="Icon.png" Pack="True" PackagePath="" />
     <None Include="LICENSE.md" Pack="True" PackagePath="" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FenixAlliance.ABS.Core\FenixAlliance.ABS.Core.csproj" />
+  </ItemGroup>
 </Project>
