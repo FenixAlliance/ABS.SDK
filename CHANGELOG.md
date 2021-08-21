@@ -124,7 +124,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ACL] Z.EntityFramework.Plus.EFCore is now a project dependency. 
 
 ### Changed
-- [ABP] Fix error where plugin assembly paths always returned null (IPluginManager Implementation)
+- [ABP] Fix error where plugin assembly paths always returned null (IModulesService Implementation)
 
 
 ## [1.1.2.x] - 2021-02-23
@@ -151,7 +151,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Extracts interface for ACL configuration Types
 - ACS is now ABP.BotEngine
-- Plugin Manager is now loosely coupled to IPluginManager
+- Plugin Manager is now loosely coupled to IModulesService
 - Adds File Manager and FileSystem Service
 - Adds antivirus scanning extension for FileSystem Service (Windows Defender)
 - AccountHolder is now the standard identity class.
