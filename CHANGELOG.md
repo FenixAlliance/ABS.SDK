@@ -4,7 +4,103 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.1.6.x] - 2021-05-22
+
+## [1.4.0] - 2022-01-12
+
+### Added
+
+- [ACL] .NET 6.0 Support.
+- [ABS] In-Studio Cart.
+- [ABS] In-Studio Store.
+- [ABS] In-Studio Wallet.
+- [ABS] In-Studio Academy.
+- [ABS] In-Studio Networks.
+- [ABS] In-Studio JobBoard.
+- [ABS] Lead Form Component.
+- [ABS] Newsletter Form Component.
+- [ABS] Create Business Modal Form.
+- [ABS] Email Template Editor Pages.
+- [ABS] Token Management Options Page.
+- [ABS] Stock Items Categorizer.
+- [APS] EN-US, ES-CO Localizations.
+- [APS] Account Mgmt. Email Alerts.
+- [APS] Google ReCaptcha Service.
+- [APS] Certificates Manager Service.
+- [APS] OAuth & IODC Service Support.
+- [ABS] Social Feeds & Post Reactions Bar.
+- [ABS] PortalContext Country Selector Form.
+- [ABS] PortalContext Currency Selector Form.
+- [ABS] PortalContext Language Selector Form.
+- [ABS] Monaco Editor Component for WebContent.
+- [ABM] AccountHolder Birthday & Gender Properties
+- [ABM] IPortalContext Interface and default implementation (PortalContext Class)
+- [ABM] ISocialDataService Interface and default implementation (SocialDataService Class)
+- [ABM] IAssembliesService Interface and default implementation (AssembliesService Class)
+- [ABM] IPaymentsService Interface and default implementation (BankTransferPaymentsService Class)
+- [ABM] IStorageService Interface & implementation (FileSystemStorageService, AzureStorageStorageService & AwsS3StorageService Classes)
+
+### Changed
+- [ACL] Updated Dependencies to the latest version
+- [ABM] Improved Queries
+- [ABM] Improved MarketplaceData
+- [ABM] Improved Memory Allocation
+- [ABS] Studio Dashboard Icons.
+
+### Removed
+- [ACL] Remove deprecated dependencies
+
+### Fixed
+- [ABS] Portal & Tenant Selector.
+- [ICX] Duplicated Recently Viewed Product Records.
+- [ABS] Fix Invoice Outliner Glitch.
+- [ABS] Fix Web Installer Versioning Glitch.
+- [ABS] Fix FHIR Server Pooling Glitch.
+- [ABS] Fix Portal Domain Bindings.
+- [ABS] Fix Network Dashboard Deadlock on IP Verification.
+
+## [1.3.0] - 2021-07-12
+
+### Added
+- [ABM] Oracle Database Provider.
+- [ABM] IOptionsService Interface and default implementation (OptionsService)
+
+### Changed
+- [ACL] Updated Dependencies to the latest version.
+
+### Removed
+- [ACL] Remove deprecated dependencies.
+
+### Fixed
+- [ABS] Fix Workflows Data Provider (LiteSQL)
+- [ABM] Entities Disambiguation
+
+
+## [1.2.1] - 2021-07-13 
+### Added
+- [ABS] View Rendering Cache
+- [ABS] AppDomain Assembly Scoping
+
+
+## [1.2] - 2021-07-12
+### Added
+- [ABS] Razor Templating Engine
+- [ABS] Custom Options Manager (API)
+- [ABS] Portal Option Manager (UI)
+- [ABS] Custom Portal Option Definitions
+- [ABS] Virtual SPA Support (Angular/React)
+- [ABS] Custom Service Endpoint Definitions
+
+## [1.1.9] - 2021-06-30
+### Added
+- [ABS] Theme Precompilation
+
+## [1.1.8] - 2021-06-18
+
+### Added
+- [ABS] Workflows Capability
+
+
+## [1.1.7] - 2021-06-06
 ### Added
 - [ABS] Log Viewer
 - [ABS] Template Views
@@ -43,7 +139,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABS] Fix page tree navigation on the live editor.
 
 
-## [1.1.5.x] - 2021-04-21
+## [1.1.6] - 2021-04-21
 ### Added
 - [ABS] View Precompilation
 - [ABS] Internal Plugin Support+
@@ -69,6 +165,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABM] Model Modification to support DB-stored precompiled views.
 ### Removed
 - [ICX] Taxonomies Creation Controllers/Views.
+
 ## [1.1.4.x] - 2021-04-13
 ### Added
 - [ABS] Extension Updates Page
@@ -124,7 +221,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ACL] Z.EntityFramework.Plus.EFCore is now a project dependency. 
 
 ### Changed
-- [ABP] Fix error where plugin assembly paths always returned null (IModulesService Implementation)
+- [ABP] Fix error where plugin assembly paths always returned null (IPluginManager Implementation)
 
 
 ## [1.1.2.x] - 2021-02-23
@@ -151,7 +248,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Extracts interface for ACL configuration Types
 - ACS is now ABP.BotEngine
-- Plugin Manager is now loosely coupled to IModulesService
+- Plugin Manager is now loosely coupled to IPluginManager
 - Adds File Manager and FileSystem Service
 - Adds antivirus scanning extension for FileSystem Service (Windows Defender)
 - AccountHolder is now the standard identity class.

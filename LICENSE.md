@@ -1,6 +1,15 @@
+## About licensing
+
+Our Community Edition was released to help you make your life easier while increasing your odds for success through the right tools and support required for your path for digitalization.
+
+The Community Edition License is not a demo license. You’ll get access to the entire ABS. Either if you are an individual or an organization.
+
+In a nutshell, You’ll only pay for core licensing fees if you use the ABS on behalf of an Enterprise, who’s an organization and its affiliates who collectively have either (a) more than 250 PCs or users or (b) more than one million U.S. dollars (or the equivalent in other currencies) in annual revenues.
+
+
 ## Logo and Trademark
 
-The brand name Alliance Business Suite and it's logos are trademarks of Fenix Alliance S.A.S in Colombia and Fenix Alliance Inc in other countries ("Fenix Alliance").
+The brand name Alliance Business Suite and its logos are trademarks of Fenix Alliance S.A.S in Colombia and Fenix Alliance Inc in other countries ("Fenix Alliance").
 
 Fenix Alliance owns and oversees the trademarks for the ABS name and logos. We have developed this trademark usage policy with the following goals in mind:
 

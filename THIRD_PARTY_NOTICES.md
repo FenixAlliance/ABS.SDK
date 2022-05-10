@@ -1,134 +1,129 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>ASP.NET Core Dependencies</title>
-</head><body>
-<table>
-<colgroup><col/><col/></colgroup>
-<tr><th>Id</th><th>LicenseUrl</th></tr>
-<tr><td>AspNetCore.HealthChecks.SqlServer</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>AspNetCore.HealthChecks.UI</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>AspNetCore.HealthChecks.UI.Client</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>AspNetCore.HealthChecks.UI.InMemory.Storage</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>AspNetCoreRateLimit</td><td></td></tr>
-<tr><td>Autofac</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Autofac.Extensions.DependencyInjection</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>AutoMapper</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>AutoMapper.Collection.EntityFrameworkCore</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>AutoMapper.Extensions.Microsoft.DependencyInjection</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Azure.Storage.Blobs</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>ByteSize</td><td></td></tr>
-<tr><td>coverlet.collector</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Dapper</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>FluentEmail.Core</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>FluentEmail.Smtp</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>FluentValidation</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>FluentValidation.AspNetCore</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>GraphQL</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>GraphQL.Server.Transports.AspNetCore</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>GraphQL.Server.Transports.WebSockets</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>GraphQL.Server.Ui.GraphiQL</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>GraphQL.Server.Ui.Playground</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>GraphQL.Server.Ui.Voyager</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Humanizer</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>IdentityServer4</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>JWT</td><td></td></tr>
-<tr><td>MailKit</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>MassTransit</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>MediatR</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>MediatR.Extensions.Microsoft.DependencyInjection</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.ApplicationInsights.AspNetCore</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.AspNet.WebApi.Client</td><td>http://www.microsoft.com/web/webpi/eula/net_library_eula_ENU.htm</td></tr>
-<tr><td>Microsoft.AspNetCore.Authentication</td><td></td></tr>
-<tr><td>Microsoft.AspNetCore.Authentication.Abstractions</td><td></td></tr>
-<tr><td>Microsoft.AspNetCore.Authentication.AzureAD.UI</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.AspNetCore.Authentication.AzureADB2C.UI</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.AspNetCore.Authentication.JwtBearer</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.AspNetCore.Authentication.OpenIdConnect</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.AspNetCore.Blazor</td><td>https://raw.githubusercontent.com/aspnet/Home/2.0.0/LICENSE.txt</td></tr>
-<tr><td>Microsoft.AspNetCore.Components</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.AspNetCore.Components.Web</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.AspNetCore.DataProtection</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.AspNetCore.Hosting</td><td>https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt</td></tr>
-<tr><td>Microsoft.AspNetCore.Hosting.Server.Abstractions</td><td></td></tr>
-<tr><td>Microsoft.AspNetCore.Http</td><td>https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt</td></tr>
-<tr><td>Microsoft.AspNetCore.Http.Abstractions</td><td></td></tr>
-<tr><td>Microsoft.AspNetCore.Http.Features</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.AspNetCore.Identity.EntityFrameworkCore</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.AspNetCore.Identity.UI</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.AspNetCore.Mvc</td><td></td></tr>
-<tr><td>Microsoft.AspNetCore.Mvc.Core</td><td>https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt</td></tr>
-<tr><td>Microsoft.AspNetCore.Mvc.NewtonsoftJson</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.AspNetCore.Mvc.WebApiCompatShim</td><td>https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt</td></tr>
-<tr><td>Microsoft.AspNetCore.SignalR.Core</td><td></td></tr>
-<tr><td>Microsoft.Azure.KeyVault.Core</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Bot.Builder.AI.Luis</td><td>https://github.com/Microsoft/BotBuilder/blob/master/LICENSE</td></tr>
-<tr><td>Microsoft.Bot.Builder.Dialogs</td><td>https://github.com/Microsoft/BotBuilder/blob/master/LICENSE</td></tr>
-<tr><td>Microsoft.Bot.Builder.integration.AspNet.Core</td><td>https://github.com/Microsoft/BotBuilder/blob/master/LICENSE</td></tr>
-<tr><td>Microsoft.CSharp</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.EntityFrameworkCore</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.EntityFrameworkCore.Design</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.EntityFrameworkCore.Proxies</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.EntityFrameworkCore.Relational</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.EntityFrameworkCore.SqlServer</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.EntityFrameworkCore.Tools</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.Extensions.Caching.Abstractions</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Extensions.Caching.Memory</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Extensions.Caching.SqlServer</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Extensions.Configuration.Abstractions</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Extensions.DependencyInjection</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Extensions.DependencyInjection.Abstractions</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.Extensions.Hosting</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Extensions.Hosting.Abstractions</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Extensions.Http</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Extensions.Localization</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.Extensions.Localization.Abstractions</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Microsoft.Extensions.Logging</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Extensions.Logging.Abstractions</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Extensions.Logging.Console</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Extensions.Logging.Debug</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Extensions.Primitives</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.Graph</td><td>https://aka.ms/deprecateLicenseUrl</td></tr>
-<tr><td>Microsoft.Identity.Client</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.IdentityModel.Tokens</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Microsoft.NET.Test.Sdk</td><td>http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm</td></tr>
-<tr><td>Microsoft.OpenApi</td><td>https://raw.githubusercontent.com/Microsoft/OpenAPI.NET/master/LICENSE</td></tr>
-<tr><td>Microsoft.Rest.ClientRuntime.Azure.Authentication</td><td>https://raw.githubusercontent.com/Microsoft/dotnet/master/LICENSE</td></tr>
-<tr><td>Microsoft.TestPlatform</td><td>https://www.visualstudio.com/microsoft-visual-studio-test-platform</td></tr>
-<tr><td>Microsoft.VisualStudio.Web.BrowserLink</td><td></td></tr>
-<tr><td>MongoDB.Bson</td><td>https://aka.ms/deprecateLicenseUrl</td></tr>
-<tr><td>MongoDB.Driver</td><td>https://aka.ms/deprecateLicenseUrl</td></tr>
-<tr><td>MSTest.TestAdapter</td><td>https://aka.ms/deprecateLicenseUrl</td></tr>
-<tr><td>MSTest.TestFramework</td><td>https://aka.ms/deprecateLicenseUrl</td></tr>
-<tr><td>Newtonsoft.Json</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>NodaTime</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>NodaTime.Serialization.JsonNet</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>NUnit</td><td></td></tr>
-<tr><td>NUnit3TestAdapter</td><td>https://aka.ms/deprecateLicenseUrl</td></tr>
-<tr><td>Polly</td><td>https://licenses.nuget.org/BSD-3-Clause</td></tr>
-<tr><td>Polly.Caching.Memory</td><td>https://licenses.nuget.org/BSD-3-Clause</td></tr>
-<tr><td>Pomelo.EntityFrameworkCore.MySql</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>reCAPTCHA.AspNetCore</td><td>https://aka.ms/deprecateLicenseUrl</td></tr>
-<tr><td>Sendgrid</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Seq.Extensions.Logging</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Serilog</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Serilog.AspNetCore</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Serilog.Enrichers.Environment</td><td>http://www.apache.org/licenses/LICENSE-2.0</td></tr>
-<tr><td>Serilog.Enrichers.Process</td><td>http://www.apache.org/licenses/LICENSE-2.0</td></tr>
-<tr><td>Serilog.Enrichers.Thread</td><td>http://www.apache.org/licenses/LICENSE-2.0</td></tr>
-<tr><td>Serilog.Settings.Configuration</td><td>https://licenses.nuget.org/Apache-2.0</td></tr>
-<tr><td>Serilog.Sinks.AzureBlobStorage</td><td>https://aka.ms/deprecateLicenseUrl</td></tr>
-<tr><td>StackifyMiddleware</td><td></td></tr>
-<tr><td>Swashbuckle.AspNetCore.Swagger</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Swashbuckle.AspNetCore.SwaggerGen</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>Swashbuckle.AspNetCore.SwaggerUI</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>System.ComponentModel.Annotations</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>System.IdentityModel.Tokens.Jwt</td><td>https://licenses.nuget.org/MIT</td></tr>
-<tr><td>WindowsAzure.Storage</td><td>https://github.com/Azure/azure-storage-net/blob/master/LICENSE.txt</td></tr>
-<tr><td>xunit</td><td>https://raw.githubusercontent.com/xunit/xunit/master/license.txt</td></tr>
-<tr><td>xunit.runner.visualstudio</td><td>https://licenses.nuget.org/MIT</td></tr>
-</table>
-</body></html>
+# Third Party Notices
+Third-party notices are provided solely for your information and include the original copyright and license which Fenix Alliance received with the third-party software. While Fenix Alliance is not the original author of the third-party materials, Fenix Alliance licenses these third-party materials to you under the terms set forth in the [EULA agreement](/License.md), except that components licensed under open source licenses requiring that such components remain under their original licenses, such as the GNU General Public License (GPL) or the GNU Lesser General Public License (LGPL), are being made available to you by Fenix Alliance under their original licensing terms. Fenix Alliance reserves all rights not expressly granted herein, whether by implication, estoppel, or otherwise.
+
+| Id                                                                | LicenseUrl                                                             |
+|-------------------------------------------------------------------|------------------------------------------------------------------------|
+| AspNetCore.HealthChecks.SqlServer                                 | https://licenses.nuget.org/Apache-2.0                                  |
+| AspNetCore.HealthChecks.UI                                        | https://licenses.nuget.org/Apache-2.0                                  |
+| AspNetCore.HealthChecks.UI.Client                                 | https://licenses.nuget.org/Apache-2.0                                  |
+| AspNetCore.HealthChecks.UI.InMemory.Storage                       | https://licenses.nuget.org/Apache-2.0                                  |
+| AspNetCoreRateLimit                                               |                                                                        |
+| Autofac                                                           | https://licenses.nuget.org/MIT                                         |
+| Autofac.Extensions.DependencyInjection                            | https://licenses.nuget.org/MIT                                         |
+| AutoMapper                                                        | https://licenses.nuget.org/MIT                                         |
+| AutoMapper.Collection.EntityFrameworkCore                         | https://licenses.nuget.org/MIT                                         |
+| AutoMapper.Extensions.Microsoft.DependencyInjection               | https://licenses.nuget.org/MIT                                         |
+| Azure.Storage.Blobs                                               | https://licenses.nuget.org/MIT                                         |
+| ByteSize                                                          |                                                                        |
+| coverlet.collector                                                | https://licenses.nuget.org/MIT                                         |
+| Dapper                                                            | https://licenses.nuget.org/Apache-2.0                                  |
+| FluentEmail.Core                                                  | https://licenses.nuget.org/MIT                                         |
+| FluentEmail.Smtp                                                  | https://licenses.nuget.org/MIT                                         |
+| FluentValidation                                                  | https://licenses.nuget.org/Apache-2.0                                  |
+| FluentValidation.AspNetCore                                       | https://licenses.nuget.org/Apache-2.0                                  |
+| GraphQL                                                           | https://licenses.nuget.org/MIT                                         |
+| GraphQL.Server.Transports.AspNetCore                              | https://licenses.nuget.org/MIT                                         |
+| GraphQL.Server.Transports.WebSockets                              | https://licenses.nuget.org/MIT                                         |
+| GraphQL.Server.Ui.GraphiQL                                        | https://licenses.nuget.org/MIT                                         |
+| GraphQL.Server.Ui.Playground                                      | https://licenses.nuget.org/MIT                                         |
+| GraphQL.Server.Ui.Voyager                                         | https://licenses.nuget.org/MIT                                         |
+| Humanizer                                                         | https://licenses.nuget.org/MIT                                         |
+| IdentityServer4                                                   | https://licenses.nuget.org/Apache-2.0                                  |
+| JWT                                                               |                                                                        |
+| MailKit                                                           | https://licenses.nuget.org/MIT                                         |
+| MassTransit                                                       | https://licenses.nuget.org/Apache-2.0                                  |
+| MediatR                                                           | https://licenses.nuget.org/Apache-2.0                                  |
+| MediatR.Extensions.Microsoft.DependencyInjection                  | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.ApplicationInsights.AspNetCore                          | https://licenses.nuget.org/MIT                                         |
+| Microsoft.AspNet.WebApi.Client                                    | http://www.microsoft.com/web/webpi/eula/net_library_eula_ENU.htm       |
+| Microsoft.AspNetCore.Authentication                               |                                                                        |
+| Microsoft.AspNetCore.Authentication.Abstractions                  |                                                                        |
+| Microsoft.AspNetCore.Authentication.AzureAD.UI                    | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.AspNetCore.Authentication.AzureADB2C.UI                 | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.AspNetCore.Authentication.JwtBearer                     | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.AspNetCore.Authentication.OpenIdConnect                 | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.AspNetCore.Blazor                                       | https://raw.githubusercontent.com/aspnet/Home/2.0.0/LICENSE.txt        |
+| Microsoft.AspNetCore.Components                                   | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.AspNetCore.Components.Web                               | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.AspNetCore.DataProtection                               | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore              | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.AspNetCore.Hosting                                      | https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt  |
+| Microsoft.AspNetCore.Hosting.Server.Abstractions                  |                                                                        |
+| Microsoft.AspNetCore.Http                                         | https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt  |
+| Microsoft.AspNetCore.Http.Abstractions                            |                                                                        |
+| Microsoft.AspNetCore.Http.Features                                | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.AspNetCore.Identity.EntityFrameworkCore                 | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.AspNetCore.Identity.UI                                  | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.AspNetCore.Mvc                                          |                                                                        |
+| Microsoft.AspNetCore.Mvc.Core                                     | https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt  |
+| Microsoft.AspNetCore.Mvc.NewtonsoftJson                           | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.AspNetCore.Mvc.WebApiCompatShim                         | https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt  |
+| Microsoft.AspNetCore.SignalR.Core                                 |                                                                        |
+| Microsoft.Azure.KeyVault.Core                                     | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Bot.Builder.AI.Luis                                     | https://github.com/Microsoft/BotBuilder/blob/master/LICENSE            |
+| Microsoft.Bot.Builder.Dialogs                                     | https://github.com/Microsoft/BotBuilder/blob/master/LICENSE            |
+| Microsoft.Bot.Builder.integration.AspNet.Core                     | https://github.com/Microsoft/BotBuilder/blob/master/LICENSE            |
+| Microsoft.CSharp                                                  | https://licenses.nuget.org/MIT                                         |
+| Microsoft.EntityFrameworkCore                                     | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.EntityFrameworkCore.Design                              | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.EntityFrameworkCore.Proxies                             | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.EntityFrameworkCore.Relational                          | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.EntityFrameworkCore.SqlServer                           | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.EntityFrameworkCore.Tools                               | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.Extensions.Caching.Abstractions                         | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Extensions.Caching.Memory                               | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Extensions.Caching.SqlServer                            | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Extensions.Configuration.Abstractions                   | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Extensions.DependencyInjection                          | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Extensions.DependencyInjection.Abstractions             | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions        | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.Extensions.Hosting                                      | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Extensions.Hosting.Abstractions                         | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Extensions.Http                                         | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Extensions.Localization                                 | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.Extensions.Localization.Abstractions                    | https://licenses.nuget.org/Apache-2.0                                  |
+| Microsoft.Extensions.Logging                                      | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Extensions.Logging.Abstractions                         | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Extensions.Logging.Console                              | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Extensions.Logging.Debug                                | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Extensions.Primitives                                   | https://licenses.nuget.org/MIT                                         |
+| Microsoft.Graph                                                   | https://aka.ms/deprecateLicenseUrl                                     |
+| Microsoft.Identity.Client                                         | https://licenses.nuget.org/MIT                                         |
+| Microsoft.IdentityModel.Tokens                                    | https://licenses.nuget.org/MIT                                         |
+| Microsoft.NET.Test.Sdk                                            | http://www.microsoft.com/web/webpi/eula/net_library_eula_enu.htm       |
+| Microsoft.OpenApi                                                 | https://raw.githubusercontent.com/Microsoft/OpenAPI.NET/master/LICENSE |
+| Microsoft.Rest.ClientRuntime.Azure.Authentication                 | https://raw.githubusercontent.com/Microsoft/dotnet/master/LICENSE      |
+| Microsoft.TestPlatform                                            | https://www.visualstudio.com/microsoft-visual-studio-test-platform     |
+| Microsoft.VisualStudio.Web.BrowserLink                            |                                                                        |
+| MongoDB.Bson                                                      | https://aka.ms/deprecateLicenseUrl                                     |
+| MongoDB.Driver                                                    | https://aka.ms/deprecateLicenseUrl                                     |
+| MSTest.TestAdapter                                                | https://aka.ms/deprecateLicenseUrl                                     |
+| MSTest.TestFramework                                              | https://aka.ms/deprecateLicenseUrl                                     |
+| Newtonsoft.Json                                                   | https://licenses.nuget.org/MIT                                         |
+| NodaTime                                                          | https://licenses.nuget.org/Apache-2.0                                  |
+| NodaTime.Serialization.JsonNet                                    | https://licenses.nuget.org/Apache-2.0                                  |
+| NUnit                                                             |                                                                        |
+| NUnit3TestAdapter                                                 | https://aka.ms/deprecateLicenseUrl                                     |
+| Polly                                                             | https://licenses.nuget.org/BSD-3-Clause                                |
+| Polly.Caching.Memory                                              | https://licenses.nuget.org/BSD-3-Clause                                |
+| Pomelo.EntityFrameworkCore.MySql                                  | https://licenses.nuget.org/MIT                                         |
+| reCAPTCHA.AspNetCore                                              | https://aka.ms/deprecateLicenseUrl                                     |
+| Sendgrid                                                          | https://licenses.nuget.org/MIT                                         |
+| Seq.Extensions.Logging                                            | https://licenses.nuget.org/Apache-2.0                                  |
+| Serilog                                                           | https://licenses.nuget.org/Apache-2.0                                  |
+| Serilog.AspNetCore                                                | https://licenses.nuget.org/Apache-2.0                                  |
+| Serilog.Enrichers.Environment                                     | http://www.apache.org/licenses/LICENSE-2.0                             |
+| Serilog.Enrichers.Process                                         | http://www.apache.org/licenses/LICENSE-2.0                             |
+| Serilog.Enrichers.Thread                                          | http://www.apache.org/licenses/LICENSE-2.0                             |
+| Serilog.Settings.Configuration                                    | https://licenses.nuget.org/Apache-2.0                                  |
+| Serilog.Sinks.AzureBlobStorage                                    | https://aka.ms/deprecateLicenseUrl                                     |
+| StackifyMiddleware                                                |                                                                        |
+| Swashbuckle.AspNetCore.Swagger                                    | https://licenses.nuget.org/MIT                                         |
+| Swashbuckle.AspNetCore.SwaggerGen                                 | https://licenses.nuget.org/MIT                                         |
+| Swashbuckle.AspNetCore.SwaggerUI                                  | https://licenses.nuget.org/MIT                                         |
+| System.ComponentModel.Annotations                                 | https://licenses.nuget.org/MIT                                         |
+| System.IdentityModel.Tokens.Jwt                                   | https://licenses.nuget.org/MIT                                         |
+| WindowsAzure.Storage                                              | https://github.com/Azure/azure-storage-net/blob/master/LICENSE.txt     |
+| xunit                                                             | https://raw.githubusercontent.com/xunit/xunit/master/license.txt       |
+| xunit.runner.visualstudio                                         | https://licenses.nuget.org/MIT                                         |
