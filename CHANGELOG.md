@@ -5,6 +5,41 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [1.4.1] - 2022-05-12
+
+### Added
+- [ABM] ICmsDataService.
+- [ABM] ICrmDataService.
+- [ABM] ISocialDataService.
+- [ABM] IMarketplaceDataService.
+- [ABM] ISecurityDataService.
+- [ABM] IGlobalDataService.
+- [ABM] IForexDataService.
+- [ABS] CodeEditorComponent with Monaco Editor.
+
+### Fixed
+- [ABS] Fixed Workflows Studio Designer not displaying on production.
+- [ABM] Improve IPricingService implementations to always use the latest data to perform generic/historical/extensible/customizable multi-currency amount calculations.
+
+### Changed
+- [ACL] Update dependencies to the latest stable versions.
+- [ABS] Templating Engine now relies on interface services on the Alliance Business Model.
+- [ABS] Templating Engine now relies on default service implementations on the Alliance Business Model.
+- [ABS] PortalContext is now optimized to use DataServices.
+- [ABS] StudioContext is now more efficient through PortalContext Optimization.
+- [ABS] `Studio.Core` now contains the layout, components, and utilities for the ABS Studio.
+- [ABS] Academy Portal is now an independent dll compatible with `Studio.Core`.
+- [ABS] Admin Portal is now an independent dll compatible with `Studio.Core`.
+- [ABS] Wallet Portal is now an independent dll compatible with `Studio.Core`.
+- [ABS] Holders Portal is now an independent dll compatible with `Studio.Core`.
+- [ABS] Tenants Portal is now an independent dll compatible with `Studio.Core`.
+- [ABS] Social Network is now an independent dll compatible with `Studio.Core.`
+- [ABS] Support Portal is now an independent dll compatible with `Studio.Core`.
+- [ABS] Developer Portal is now an independent dll compatible with `Studio.Core`.
+
+### Removed
+- [ABM] I 
+
 ## [1.4.0] - 2022-01-12
 
 ### Added
@@ -300,7 +335,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Extensibility via Custom Modules
 - Extensibility via Custom Themes
 - Folder / File Management (Azure Storage, File System)
-- GraphQl API with Voyager, GraphiQl y GraphQl Playground
+- graphql API with Voyager, GraphiQl y GraphQl Playground
 - Headless API with Swagger Support
 - HealthCheck Rules with UI Support
 - i18n Enabled (Based on GeoAPI and Custom Settings)
