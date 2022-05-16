@@ -135,7 +135,7 @@ dotnet nuget add source https://nuget.absuite.net/nuget -n absuite.net
 dotnet add package FenixAlliance.ABS.Hub --version latest
 ```
 
-- #### Register Services and Configuration
+- #### Register Services and Configuration on .NET 5.0
 
 ```cs
 using FenixAlliance.ABS.Hub.Extensions;
@@ -175,7 +175,21 @@ namespace FenixAlliance.ABS
 }
 ```
 
+- #### Register Services and Configuration on .NET 6.0
 
+``` cs
+using FenixAlliance.ABS.Hub.Extensions;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddAllianceBusinessSuite(builder.Configuration, builder.Environment);
+
+var app = builder.Build();
+
+app.UseAllianceBusinessSuite(builder.Configuration, builder.Environment);
+
+app.Run();
+```
 
 
 
