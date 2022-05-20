@@ -4,6 +4,49 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.4] - 2022-05-19
+
+### Changed
+
+- [ABM] Squash migrations for MySQL.
+- [ABP] Update Service Registration Lifetime.
+- [ACL] Update dependencies to the latest stable versions.
+- [ABS] Improve Academy Pages to use new methods on IAcademyService.
+- [ABM] Use new scoped for Scoped Services used over Singlenton Services.
+- [ABM] Adds GetStudentCoursesAsync method to IAcademyService and Default Implemeation.
+- [ABM] Adds GetStudentProfilesAsync method to IAcademyService and Default Implemeation.
+- [ABM] Adds GetCourseEnrollmentAsync method to IAcademyService and Default Implemeation.
+- [ABM] Adds GetCourseEnrollmentsAsync method to IAcademyService and Default Implemeation.
+- [ABM] Adds GetInstructorCoursesAsync method to IAcademyService and Default Implemeation.
+- [ABM] Adds GetInstructorProfilesAsync method to IAcademyService and Default Implemeation.
+- [ABM] Adds GetCourseCompletionCertificatesAsync method to IAcademyService and Default Implemeation.
+
+
+### Fixed
+
+- [ABS] Studio wasn't using the SelectedBusinessID for each holder, thus, when reloaded, business selection used to get overrided with null.
+
+
+## [1.5.3] - 2022-05-15
+
+### Changed
+- [ACL] Update dependencies to the latest stable versions.
+- [ABS] Refactor Static Assets to improve package installation time.
+
+
+## [1.5.1] - 2022-05-14
+
+### Changed
+- [ACL] Update dependencies to the latest stable versions.
+- [ABS] Umprove UI Rendering Proccess.
+
+
+## [1.5.0] - 2022-05-13
+
+### Changed
+- [ACL] Update dependencies to the latest stable versions.
+- [ABS] Umprove UI Rendering Proccess.
+
 
 ## [1.4.1] - 2022-05-12
 
