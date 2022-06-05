@@ -4,6 +4,77 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.7.2] - 2022-06-04
+
+### Added
+- [ABM] `IWebUIService` and default implementation (`WebUIService`).
+- [ABM] `IDateTimeService` and default implementation (`DateTimeService`).
+
+### Changed
+- [ABS] Register Fluent UI & Fast Design Layout Contexts.
+- [ABP] Register `IWebUIService` default implementation (`WebUIService`) as Singleton Service.
+- [ABP] Register `IDateTimeService` default implementation (`DateTimeService`) as Singleton Service.
+
+
+## [1.7.1] - 2022-06-04
+
+### Fixed
+- [ABS] Quick Panels causing UI deadlocks.
+
+## [1.7.0] - 2022-06-04
+
+### Added
+- [ABS] Studio Static Asset Bundles
+
+### Changed
+- [ABS] Improve Country Flag Rendering.
+- [ABS] Improve Country Flag Rendering.
+- [ABS] Improve Studio Rendering Process.
+- [ABM] Improve Curriculum Relations.
+- [ACL] Update dependencies to the latest stable versions.
+
+## [1.6.0] - 2022-05-28
+
+### Added
+- [ABM] Gig Entity to Database Scheme.
+- [ABM] GigApplication Entity to Database Scheme.
+
+## [1.5.9] - 2022-05-27
+
+### Fixed
+- [ABM] IContactService's default implementation is now using ICrmDataService.
+
+## [1.5.8] - 2022-05-26
+
+### Added
+- [ABM] IContactService's default implementation is now using per-operation Data Context instances.
+
+## [1.5.7 - 2022-05-25
+### Added
+- [ABS] ContactSyncronizationStrategy on PortalContext.
+
+## [1.5.6] - 2022-05-23
+
+### Fixed
+- [ABS] Fix error on Studio Modules Loading Process. More assemblies than necessary used to be passed to the router.
+- [ABM] Adds additional properties to Alliance Business Model for Job Board Applications.
+- [ABM] Adds V1.5.6 ABM Migration for MySQL, MS SQL, and Oracle Data Providers.
+
+## [1.5.5] - 2022-05-22
+
+### Added
+- [ACL] Brazorize Library Dependency.
+
+### Fixed
+
+- [ABP] Improved ServiceLifetime consistency across default service implementations.
+- [ABS] Improved Studio Rendering Process.
+
+### Changed
+
+- [ACL] Update dependencies to the latest stable versions.
+- [ABS] IAcademyDataService and AcademyDataService are now ILmsDataService and LmsDataService respectively.
+
 ## [1.5.4] - 2022-05-19
 
 ### Changed
@@ -12,19 +83,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [ABP] Update Service Registration Lifetime.
 - [ACL] Update dependencies to the latest stable versions.
 - [ABS] Improve Academy Pages to use new methods on IAcademyService.
-- [ABM] Use new scoped for Scoped Services used over Singlenton Services.
-- [ABM] Adds GetStudentCoursesAsync method to IAcademyService and Default Implemeation.
-- [ABM] Adds GetStudentProfilesAsync method to IAcademyService and Default Implemeation.
-- [ABM] Adds GetCourseEnrollmentAsync method to IAcademyService and Default Implemeation.
-- [ABM] Adds GetCourseEnrollmentsAsync method to IAcademyService and Default Implemeation.
-- [ABM] Adds GetInstructorCoursesAsync method to IAcademyService and Default Implemeation.
-- [ABM] Adds GetInstructorProfilesAsync method to IAcademyService and Default Implemeation.
-- [ABM] Adds GetCourseCompletionCertificatesAsync method to IAcademyService and Default Implemeation.
+- [ABM] Use new scoped for Scoped Services used over Singleton Services.
+- [ABM] Adds GetStudentCoursesAsync method to IAcademyService and Default Implementation.
+- [ABM] Adds GetStudentProfilesAsync method to IAcademyService and Default Implementation.
+- [ABM] Adds GetCourseEnrollmentAsync method to IAcademyService and Default Implementation.
+- [ABM] Adds GetCourseEnrollmentsAsync method to IAcademyService and Default Implementation.
+- [ABM] Adds GetInstructorCoursesAsync method to IAcademyService and Default Implementation.
+- [ABM] Adds GetInstructorProfilesAsync method to IAcademyService and Default Implementation.
+- [ABM] Adds GetCourseCompletionCertificatesAsync method to IAcademyService and Default Implementation.
 
 
 ### Fixed
 
-- [ABS] Studio wasn't using the SelectedBusinessID for each holder, thus, when reloaded, business selection used to get overrided with null.
+- [ABS] Studio wasn't using the SelectedBusinessID for each holder, thus, when reloaded, business selection used to get override with null.
 
 
 ## [1.5.3] - 2022-05-15
@@ -38,14 +109,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - [ACL] Update dependencies to the latest stable versions.
-- [ABS] Umprove UI Rendering Proccess.
+- [ABS] Improve UI Rendering Process.
 
 
 ## [1.5.0] - 2022-05-13
 
 ### Changed
 - [ACL] Update dependencies to the latest stable versions.
-- [ABS] Umprove UI Rendering Proccess.
+- [ABS] Improve UI Rendering Process.
 
 
 ## [1.4.1] - 2022-05-12

@@ -17,7 +17,7 @@
 
 # Welcome to the Alliance Business Suite Documentation!
 
-Aiming to help organizations reach beyond expectations, the Alliance Business Suite is being designed to augment businesses across industries all over the world through a low-code, and fully customizable business development platform.
+Aiming to help organizations reach beyond expectations, the Alliance Business Suite is designed to augment businesses across industries worldwide through a low-code, and fully customizable business development platform.
 
 At a very high level, the Alliance Business Suite is a set of powerful, extensible, multi-tenant applications built to enable businesses to jumpstart their digitalization process through powerful business applications built to cover the core processes of any given business.
 
@@ -49,7 +49,7 @@ It also provides common features for managing authentication, authorization, dat
 
 The Alliance Business Platform is a Modular API Framework. It leverages .NET 5.0 with the best of REST, SignalR, GraphQl y gRPCto transact with the Alliance Business Model Schema (AMB). The Alliance Business Platform is an open-source and cross-platform framework for integrating next-generation functionalities into your applications. It allows you to build spectacular single-page apps using .NET and C# with or without JavaScript. ABP apps can connect and transact to the data layer (The Alliance Business Modal Schema) using any language through standard requests through the various GrPC, HTTP, and GraphQL Endpoints. 
 
-You can easily build on, and extend The Alliance Business Platform through ASP.NET + Angular / React (And pretty much any Web Stack Framework), to capture additional business-specific scenarios.
+To capture additional business-specific scenarios, you can easily build on and extend The Alliance Business Platform through ASP.NET + Angular / React (And pretty much any Web Stack Framework).
 
 - ## [Alliance Business Studio](/Components/Alliance-Business-Studio.md)
 
@@ -71,7 +71,13 @@ The power of the Alliance Business Suite can be leveraged from small personal bl
 
 - Install **[.NET 6 SDK (v6.0.*)](https://dotnet.microsoft.com/download/dotnet/6.0)**.
 
+## For Business Use.
 
+- Download or Clone the latest Alliance Business Suite release. Decompress the downloaded `.zip` on a folder on your PC, navigate to that folder and execute the `FenixAlliance.ABS.Web.exe` file. 
+
+A console window will pop up, providing information about the initialization process. Open your server on the provided URL, go through the installation wizard, and start using the Alliance Business Suite. For more information about hosting your Alliance Business Suite instance, please refer to [Hosting your Alliance Business Suite.](/Fundamentals/Hosting.md)
+
+## For Developer Users
 
 - Install the latest edition (v16.8 or higher) of [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) (Community, Professional, or Enterprise Editions) with the **ASP.NET and web development** workload enabled. Alliance Business Suite works with ALL editions of Visual Studio from Community to Enterprise. If you do not have a SQL Server installation available already and you wish to use LocalDB for development, you must also install the **.NET desktop development workload**.  
 
