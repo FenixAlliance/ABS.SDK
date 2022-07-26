@@ -4,6 +4,60 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2022-07-26
+
+### Added
+
+- [ABS] In-Studio UI Improvements.
+- [ABS] In-Studio Module Management Engine.
+- [ABS] Business Enrollments Management Engine.
+- [ABS] Business Applications Management Engine.
+- [ABS] Business Security Roles Management Engine.
+- [ABS] Business Security Permissions Management Engine.
+- [ABM] `ILicensingService` and default implementation (`LicensingService`).
+- [ABM] `ISubscriptionsService` and default implementation (`LicensingService`).
+- [ABM] `ISecurityCertificatesService` and default implementation  (`SecurityCertificatesService`).
+- [ACL] Adds `pt-PT` Translations.
+- [ACL] Adds `pt-BR` Translations.
+- [ACL] Adds `de-DE` Translations.
+- [ACL] Adds `it-IT` Translations.
+- [ACL] Adds `fr-FR` Translations.
+- [ACL] Enables Licensing Engine (ABS Now requires a license).
+
+### Fixed
+- [ABM] COA importing capabilities on Accounting Service.
+- [ABS] Error when navigating to the Fiscal Authorities page.
+- [ABS] Virtualize License Types List on Licenses Modal Form.
+- [ABS] Virtualize Subscription Plans List on Subscriptions Modal Form.
+- [ABS] Error when navigating to new created Organization (Contact) details page.
+
+### Changed
+- [ABS] Update Studio Base Theme for V2.
+- [ABM] Improve `SecurityHelpers` class.
+
+## [1.9.0] - 2022-07-20
+
+### Fixed
+- [ABS] UI Improvements for UI & Core Components.
+- [ABS] Contextual Menu showing when no business is selected.
+- [ABP] Improve DI Tree for most services.
+
+## [1.8.0] - 2022-07-04
+
+### Added
+- [ABS] Dark Theme Support for Studio.
+- [ABP] OData Support for REST Endpoints.
+- [ABM] `ICookiesService` and default implementation (`CookiesService`).
+- [ABM] `IDataProtectionService` and default implementation (`DataProtectionService`).
+- [ABM] `IBrowserStorageService` and default implementation (`BrowserStorageService`).
+
+### Changed
+- [ABS] Update Studio Base Theme for V2.
+- [ABS] Improve Studio Menus & Mobile Layout.
+
+### Fixed
+- [APS] NullRedException on SecurityDataService due to DI misconfiguration.
+
 ## [1.7.2] - 2022-06-04
 
 ### Added
