@@ -1,0 +1,42 @@
+﻿<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="_content/FenixAlliance.ABS.SDK/js/utils.js"></script>
+<script src="_content/FenixAlliance.ABS.SDK/lib/holdon/holdon.min.js"></script>
+<script src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+<script src="_content/FenixAlliance.ABS.SDK/lib/money/money.min.js"></script>
+<script type="text/javascript">
+    // loadJSON method to open the JSON file.
+    function loadJSON(path, success, error) {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    success(JSON.parse(xhr.responseText));
+                }
+                else {
+                    error(xhr);
+                }
+            }
+        };
+        xhr.open('GET', path, true);
+        xhr.send();
+    }
+
+    loadJSON("https://raw.githubusercontent.com/ComputeWorks/Forex/main/latest.json", setExchangeRates, 'jsonp');
+
+    function setExchangeRates(data) {
+
+        // Check money.js has finished loading:
+        if (typeof fx !== "undefined" && fx.rates) {
+            fx.rates = data.rates;
+            fx.base = data.base;
+        } else {
+            // If not, apply to fxSetup global:
+            var fxSetup = {
+                rates: data.rates,
+                base: data.base
+            }
+        }
+
+    }
+
+</script>

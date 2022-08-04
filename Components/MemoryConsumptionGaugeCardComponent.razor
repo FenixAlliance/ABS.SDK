@@ -1,0 +1,202 @@
+﻿@using System.Diagnostics
+@using FenixAlliance.ABM.Models.DTOs.Components.Internal
+@using FenixAlliance.ABM.SDK.Interfaces
+@using System.Threading
+@inject IMemoryMetricsService MemoryMetricsService
+@implements IAsyncDisposable
+@implements IDisposable
+<div class="card">
+
+    <div class="card-header">
+        <h3 class="card-title">@_["Server Memory Usage"]</h3>
+    </div>
+
+
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+
+                <RadzenRadialGauge Style="width: 100%; height: 300px;">
+                    <RadzenRadialGaugeScale StartAngle="-150" EndAngle="150" Step="(double) (MemoryMetrics.Total/10)" FormatString="{0:0}" Min="0" Max="MemoryMetrics.Total" TickPosition="GaugeTickPosition.Inside">
+                        <RadzenRadialGaugeScalePointer Value="(double) (MemoryMetrics.Used)" Length="0.6" ShowValue=@true>
+                            <Template Context="pointer">
+                                <h4>
+                                    @(pointer.Value.ToString("0.00")) <sup>MB</sup>
+                                </h4>
+                            </Template>
+                        </RadzenRadialGaugeScalePointer>
+                        <RadzenRadialGaugeScaleRange From="0" To="(double) (MemoryMetrics.Total/3)" Fill="green" />
+                        <RadzenRadialGaugeScaleRange From="(double) (MemoryMetrics.Total/3)" To="(double) (MemoryMetrics.Total/3)*2" Fill="orange" />
+                        <RadzenRadialGaugeScaleRange From="(double) (MemoryMetrics.Total/3)*2" To="MemoryMetrics.Total" Fill="red" />
+                    </RadzenRadialGaugeScale>
+                </RadzenRadialGauge>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <RadzenRadialGauge Style="width: 100%; height: 300px;">
+                    <RadzenRadialGaugeScale StartAngle="-150" EndAngle="150" Step="(double) ((MemoryMetrics.Free + MemoryWorkingSet )/10)" FormatString="{0:0}" Min="0" Max="(double) ((MemoryMetrics.Free + MemoryWorkingSet ))" TickPosition="GaugeTickPosition.Inside">
+                        <RadzenRadialGaugeScalePointer Value="(double) (MemoryWorkingSet)" Length="0.6" ShowValue=@true>
+                            <Template Context="pointer">
+                                <h4>
+                                    @(pointer.Value.ToString("0.00")) <sup>MB</sup>
+                                </h4>
+                            </Template>
+                        </RadzenRadialGaugeScalePointer>
+                        <RadzenRadialGaugeScaleRange From="0" To="(double) ((MemoryMetrics.Free + MemoryWorkingSet )/3)" Fill="green" />
+                        <RadzenRadialGaugeScaleRange From="(double) ((MemoryMetrics.Free + MemoryWorkingSet )/3)" To="(double)((MemoryMetrics.Free + MemoryWorkingSet )/3)*2" Fill="orange" />
+                        <RadzenRadialGaugeScaleRange From="(double) ((MemoryMetrics.Free + MemoryWorkingSet )/3)*2" To="(MemoryMetrics.Free + MemoryWorkingSet )" Fill="red" />
+                    </RadzenRadialGaugeScale>
+                </RadzenRadialGauge>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card-footer">
+
+        <div class="progress progress-separated mb-3">
+            <div class="progress-bar bg-info" role="progressbar" style="width: @(Math.Round((double)(((MemoryMetrics.Used - MemoryWorkingSet) * 100) / MemoryMetrics.Total),2).ToString().Replace(",", "."))%"></div>
+            <div class="progress-bar bg-primary" role="progressbar" style="width: @(Math.Round((double)(((MemoryWorkingSet) * 100) / MemoryMetrics.Total),2).ToString().Replace(",", "."))%"></div>
+            <div class="progress-bar bg-success" role="progressbar" style="width: @(Math.Round((double)((MemoryMetrics.Free * 100) / MemoryMetrics.Total),2).ToString().Replace(",", "."))%"></div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-auto d-flex align-items-center px-2">
+                <span class="legend me-2 bg-info"></span>
+                <span>@_["Total Used Memory"]</span>
+                <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">
+                    @{
+                        if (!Calculated)
+                        {
+                            <Text>
+                                &nbsp;
+                            </Text>
+                            <a class="abs-spinner abs-spinner--center abs-spinner--sm abs-spinner--info"></a>
+                        }
+                        else
+                        {
+                            @(Math.Round(MemoryMetrics.Used - MemoryWorkingSet)) <Text>MB</Text>
+                        }
+                    }
+
+                </span>
+            </div>
+
+            <div class="col-auto d-flex align-items-center pe-2">
+                <span class="legend me-2 bg-primary"></span>
+                <span>@_["Memory Working Set"]</span>
+                <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">
+                    @{
+                        if (!Calculated)
+                        {
+                            <Text>
+                                &nbsp;
+                            </Text>
+                            <a class="abs-spinner abs-spinner--center abs-spinner--sm abs-spinner--info"></a>
+                        }
+                        else
+                        {
+                            @Math.Round(((double)MemoryWorkingSet), 2) <Text>MB</Text>
+                        }
+                    }
+                </span>
+            </div>
+
+            <div class="col-auto d-flex align-items-center px-2">
+                <span class="legend me-2 bg-success"></span>
+                <span>@_["Total Free Memory"]</span>
+                <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">
+
+                    @{
+                        if (!Calculated)
+                        {
+                            <Text>
+                                &nbsp;
+                            </Text>
+                            <a class="abs-spinner abs-spinner--center abs-spinner--sm abs-spinner--info"></a>
+                        }
+                        else
+                        {
+                            @(Math.Round(MemoryMetrics.Free)) <Text>MB</Text>
+                        }
+                    }
+                </span>
+            </div>
+
+            <div class="col-auto d-flex align-items-center ps-2">
+                <span class="legend me-2"></span>
+                <span>@_["Total Available Memory"]</span>
+                <span class="d-none d-md-inline d-lg-none d-xxl-inline ms-2 text-muted">
+
+                    @{
+                        if (!Calculated)
+                        {
+                            <Text>
+                                &nbsp;
+                            </Text>
+                            <a class="abs-spinner abs-spinner--center abs-spinner--sm abs-spinner--info"></a>
+                        }
+                        else
+                        {
+                            @(Math.Round(MemoryMetrics.Total)) <Text>MB</Text>
+                        }
+                    }
+
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+@code {
+    public MemoryMetrics MemoryMetrics { get; set; } = new();
+    public Process Process { get; set; } = Process.GetCurrentProcess();
+
+
+    bool Calculated { get; set; } = true;
+
+    Timer Timer { get; set; }
+    long PrivateMemory { get; set; }
+    long PagedMemory { get; set; }
+    long MemoryWorkingSet { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            //UpdateMemoryStatus(null);
+            Timer = new Timer(UpdateMemoryStatus, null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+        }
+    }
+
+    async void UpdateMemoryStatus(object state)
+    {
+        Process = Process.GetCurrentProcess();
+        MemoryMetrics = MemoryMetricsService.GetMetrics();
+        PagedMemory = Process.PagedMemorySize64 / 1024 / 1024;
+        PrivateMemory = Process.PrivateMemorySize64 / 1024 / 1024;
+        MemoryWorkingSet = Process.WorkingSet64 / 1024 / 1024;
+
+        await InvokeAsync(StateHasChanged);
+    }
+
+
+    public void Dispose()
+    {
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        Timer?.DisposeAsync();
+    }
+}

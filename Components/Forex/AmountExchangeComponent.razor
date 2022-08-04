@@ -1,0 +1,53 @@
+﻿@DisplayAmount
+
+@code {
+
+    [Parameter] public double Amount { get; set; }
+    [Parameter] public string Locale { get; set; } = "en-US";
+    [Parameter] public string ToCurrencyID { get; set; } = "USD.USA";
+    [Parameter] public string FromCurrencyID { get; set; } = "USD.USA";
+    [Parameter] public string Style { get; set; } = "currency";
+    [Parameter] public DateTime Date { get; set; } = DateTime.UtcNow;
+
+    public string DisplayAmount { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        DisplayAmount = _["Loading..."].Value;
+    }
+
+    async Task ConvertAmount()
+    {
+        var exchangedRate = 0.0;
+
+        if (FromCurrencyID == ToCurrencyID)
+            exchangedRate = Amount;
+        else
+            exchangedRate = await JS.InvokeAsync<double>("abs.exchangeRate", Amount, FromCurrencyID, ToCurrencyID);
+
+        DisplayAmount = await JS.InvokeAsync<string>("abs.formatAmount", exchangedRate, (ToCurrencyID?.Split(".")?[0] ?? "USD"), Locale);
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        try
+        {
+            await ConvertAmount();
+            this.StateHasChanged();
+        }
+        catch (Exception)
+        {
+            // nop
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            this.StateHasChanged();
+        }
+
+        await ConvertAmount();
+    }
+}

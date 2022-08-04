@@ -1,0 +1,45 @@
+﻿@DisplayAmount
+
+@code {
+    /// <summary>
+    /// Amount in USD
+    /// </summary>
+    [Parameter] public double Amount { get; set; }
+    [Parameter] public string Locale { get; set; } = "en-US";
+    [Parameter] public string Currency { get; set; } = "USD";
+
+    public string DisplayAmount { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        DisplayAmount = _["Loading..."].Value;
+    }
+
+    async Task ConvertAmount()
+    {
+        DisplayAmount = await JS.InvokeAsync<string>("abs.formatCurrency", Amount, Currency, Locale);
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        try
+        {
+            await ConvertAmount();
+            this.StateHasChanged();
+        }
+        catch (Exception)
+        {
+            // nop
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            this.StateHasChanged();
+        }
+
+        await ConvertAmount();
+    }
+}

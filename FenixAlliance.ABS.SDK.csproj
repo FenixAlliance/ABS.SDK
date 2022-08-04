@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <Icon>Icon.png</Icon>
-    <Version>1.9.9.1</Version>
+    <Version>1.9.9.4</Version>
     <language>en-US</language>
     <LangVersion>latest</LangVersion>
     <PackageIcon>Icon.png</PackageIcon>
@@ -12,7 +12,7 @@
     <NeutralLanguage>en-US</NeutralLanguage>
     <RepositoryBranch>main</RepositoryBranch>
     <TargetFrameworks>net6.0</TargetFrameworks>
-    <DevelopmentDependency>false</DevelopmentDependency>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
     <DevelopmentDependency>false</DevelopmentDependency>
@@ -22,13 +22,17 @@
     <PackageTags>Alliance Business Suite; Fenix Alliance, ABS, ABM; ABP; ACL; APS; ACS;</PackageTags>
     <PackageIconUrl>https://fenixalliance.com.co/images/FenixAlliance/AppIcon/apple-icon-120x120.png</PackageIconUrl>
     <Description>Application Component for the Alliance Business Suite.</Description>
-    <RepositoryUrl>https://github.com/FenixAlliance/ABS.SDK</RepositoryUrl>
+    <RepositoryUrl>https://github.com/FenixAlliance/ABS.Portal.Hub</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
     <None Include="Icon.png" Pack="True" PackagePath="" />
     <None Include="LICENSE.md" Pack="True" PackagePath="" />
+    <PackageReference Include="Radzen.Blazor" Version="3.19.11" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FenixAlliance.ABS.Core\FenixAlliance.ABS.Core.csproj" />
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FenixAlliance.ABP\FenixAlliance.ABP.SDK\FenixAlliance.ABP.SDK.csproj" />
   </ItemGroup>
 </Project>
