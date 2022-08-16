@@ -1,6 +1,4 @@
-﻿using FenixAlliance.ABS.SDK.Resources;
-
-using Microsoft.Extensions.Localization;
+﻿using Microsoft.Extensions.Localization;
 
 using System.Reflection;
 

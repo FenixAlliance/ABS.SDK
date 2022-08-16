@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <Icon>Icon.png</Icon>
-    <Version>1.9.9.4</Version>
+    <Version>1.9.9.9</Version>
     <language>en-US</language>
     <LangVersion>latest</LangVersion>
     <PackageIcon>Icon.png</PackageIcon>
@@ -27,7 +27,7 @@
   <ItemGroup>
     <None Include="Icon.png" Pack="True" PackagePath="" />
     <None Include="LICENSE.md" Pack="True" PackagePath="" />
-    <PackageReference Include="Radzen.Blazor" Version="3.19.11" />
+    <PackageReference Include="Radzen.Blazor" Version="3.20.3" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interfaces\" />

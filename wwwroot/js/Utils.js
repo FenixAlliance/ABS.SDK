@@ -1,4 +1,19 @@
-﻿window.abs =  {
+﻿window.abs = {
+    getIp: function () {
+        return ip;
+    },
+    getCartID: function () {
+        return CartID;
+    },
+    setLayout: function (ref) {
+        window.layout = ref;
+    },
+    setCommandBar: function (ref) {
+        window.commandBar = ref;
+    },
+    formatAmount: function (amount, currency = "USD", locale = "en-US", style = "currency", currencyDisplay = "symbol", minimumFractionDigits = 2) {
+        return new Intl.NumberFormat(locale, { style: style, currency: currency, currencyDisplay: currencyDisplay, minimumFractionDigits: minimumFractionDigits }).format(amount)
+    },
     exchangeRate: function (amount, from, to) {
         return fx(amount).from(from).to(to);
     },
@@ -98,6 +113,22 @@
         };
 
         HoldOn.open(options);
+    },
+    finishLoading: function () {
+        HoldOn.close();
+        NProgress.done()
+    },
+    startLoading: function (text = "Loading...", bgColor = "#ffffff", textColor = "white") {
+
+        var options = {
+            theme: "sk-cube-grid",
+            message: text,
+            backgroundColor: bgColor,
+            textColor: textColor
+        };
+
+        HoldOn.open(options);
+        NProgress.start()
     },
 };
 
