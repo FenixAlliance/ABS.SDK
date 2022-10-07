@@ -1,0 +1,71 @@
+﻿[
+
+  {
+    "outputFileName": "wwwroot/min/css/bootstrap.min.css",
+    "inputFiles": [
+      "wwwroot/node_modules/bootstrap/dist/css/bootstrap.min.css"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/node_modules/nprogress/nprogress.min.css",
+    "inputFiles": [
+      "wwwroot/node_modules/nprogress/nprogress.css"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/min/css/globals.min.css",
+    "inputFiles": [
+      "wwwroot/node_modules/nprogress/nprogress.min.css",
+      "wwwroot/node_modules/toastr/build/toastr.min.css",
+      "wwwroot/node_modules/holdon.js/src/css/HoldOn.min.css",
+      "wwwroot/node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+
+
+  {
+    "outputFileName": "wwwroot/node_modules/nprogress/nprogress.min.js",
+    "inputFiles": [
+      "wwwroot/node_modules/nprogress/nprogress.js"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/min/js/globals.min.js",
+    "inputFiles": [
+      "wwwroot/node_modules/jquery/dist/jquery.min.js",
+      "wwwroot/node_modules/nprogress/nprogress.js",
+      "wwwroot/node_modules/toastr/build/toastr.min.js",
+      "wwwroot/node_modules/holdon.js/src/js/HoldOn.min.js",
+      "wwwroot/node_modules/js-cookie/dist/js.cookie.min.js",
+      "wwwroot/node_modules/@fortawesome/fontawesome-free/js/all.min.js",
+      "wwwroot/lib/offline/js/offline.js"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  },
+  {
+    "outputFileName": "wwwroot/min/js/globals.njq.min.js",
+    "inputFiles": [
+      "wwwroot/node_modules/nprogress/nprogress.min.js",
+      "wwwroot/node_modules/toastr/build/toastr.min.js",
+      "wwwroot/node_modules/holdon.js/src/js/HoldOn.min.js",
+      "wwwroot/node_modules/@fortawesome/fontawesome-free/js/all.min.js"
+    ],
+    "minify": {
+      "enabled": false
+    }
+  }
+]

@@ -12,13 +12,16 @@
         window.commandBar = ref;
     },
     formatAmount: function (amount, currency = "USD", locale = "en-US", style = "currency", currencyDisplay = "symbol", minimumFractionDigits = 2) {
-        return new Intl.NumberFormat(locale, { style: style, currency: currency, currencyDisplay: currencyDisplay, minimumFractionDigits: minimumFractionDigits }).format(amount)
+        return new Intl.NumberFormat(locale, { style: style, currency: currency.split('.')[0], currencyDisplay: currencyDisplay, minimumFractionDigits: minimumFractionDigits }).format(amount)
     },
     exchangeRate: function (amount, from, to) {
-        return fx(amount).from(from).to(to);
+        return fx(amount).from(from.split('.')[0]).to(to.split('.')[0]);
     },
     openUrlNewTab: function (URL) {
         window.open(URL, '_blank');
+    },
+    injectScript: function (source) {
+        $('<script />', { type: 'text/javascript', src: source }).appendTo('head');
     },
     addScript: function (URI)  {
         $(document).ready(function () {
@@ -67,6 +70,9 @@
     formatCurrency: function (number, currency = "USD", locale = "en-US") {
         return new Intl.NumberFormat(locale, { style: 'currency', currency: currency }).format(number)
     },
+    notification: function (notificationType, notificationMessage) {
+        abs.toastrNotification(notificationType, notificationMessage);
+    },
     toastNotification: function (notificationType, notificationMessage) {
         abs.toastrNotification(notificationType, notificationMessage);
     },
@@ -103,6 +109,16 @@
     removeBodyClass: function (newClass) {
         $('body').removeClass(newClass);
     },
+    initPhoneInput: function (options) {
+        try {
+            
+            var input = document.querySelector(".phone");
+            window.intlTelInput(input, options);
+
+        } catch (e) {
+
+        }
+    },
     openHoldOn: function (text = "Loading...", bgColor = "#ffffff", textColor = "white") {
 
         var options = {
@@ -130,7 +146,35 @@
         HoldOn.open(options);
         NProgress.start()
     },
+    setExchangeRates: function (rates) {
+        // Check money.js has finished loading:
+        if (typeof fx !== "undefined" && fx.rates) {
+            fx.rates = rates.rates;
+            fx.base = rates.base;
+        } else {
+            // If not, apply to fxSetup global:
+            var fxSetup = {
+                rates: rates.rates,
+                base: rates.base
+            }
+        }
+    },
+    initForexRates: function () {
+        var path = "https://raw.githubusercontent.com/ComputeWorks/Forex/main/latest.json";
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    abs.setExchangeRates(JSON.parse(xhr.responseText));
+                }
+                else {
+                    console.error(xhr);
+                }
+            }
+        };
+        xhr.open('GET', path, true);
+        xhr.send();
+    }
 };
-
 
 

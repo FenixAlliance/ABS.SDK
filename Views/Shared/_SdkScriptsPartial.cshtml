@@ -1,0 +1,24 @@
+﻿@using FenixAlliance.ABM.SDK.Helpers
+
+@{
+    string AntiForgeryToken = StringHelpers.ToRegularString(Html.AntiForgeryToken()).ToString().Split(" ")[3].Replace("value=", "").Replace("\"", "");
+}
+
+<script asp-append-version="true" type="text/javascript"  src="_content/FenixAlliance.ABS.SDK/lib/jquery/jquery-3.6.0.min.js"></script>
+<script asp-append-version="true" type="text/javascript"  src="_content/FenixAlliance.ABS.SDK/lib/toastr/toastr.min.js"></script>
+<script asp-append-version="true" type="text/javascript"  src="_content/FenixAlliance.ABS.SDK/lib/holdon/holdon.min.js"></script>
+<script asp-append-version="true" type="text/javascript"  src="_content/FenixAlliance.ABS.SDK/lib/money/money.min.js"></script>
+<script asp-append-version="true" type="text/javascript"  src="_content/FenixAlliance.ABS.SDK/js/Utils.js"></script>
+<script asp-append-version="true" type="text/javascript"  src="_content/Radzen.Blazor/Radzen.Blazor.js"></script>
+
+<script type="text/javascript">
+    abs.initForexRates()
+</script>
+
+<script>
+    abs.getAntiforgeryToken = function () {
+        return "@(AntiForgeryToken)";
+    }
+</script>
+
+
