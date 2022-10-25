@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <Icon>Icon.png</Icon>
-    <Version>1.9.9.27</Version>
+    <Version>1.9.9.28</Version>
     <language>en-US</language>
     <LangVersion>latest</LangVersion>
     <PackageIcon>Icon.png</PackageIcon>
@@ -11,7 +11,7 @@
     <MinClientVersion>2.8</MinClientVersion>
     <NeutralLanguage>en-US</NeutralLanguage>
     <RepositoryBranch>main</RepositoryBranch>
-    <TargetFrameworks>net6.0</TargetFrameworks>
+    <TargetFrameworks>net7.0</TargetFrameworks>
     <NoDefaultExcludes>true</NoDefaultExcludes>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
