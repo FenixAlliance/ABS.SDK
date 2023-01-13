@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <Icon>Icon.png</Icon>
-    <Version>1.9.9.41</Version>
+    <Version>1.9.9.42</Version>
     <language>en-US</language>
     <IsPackable>true</IsPackable>
     <LangVersion>latest</LangVersion>
@@ -31,7 +31,9 @@
     <None Include="LICENSE.md" Pack="True" PackagePath="" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Radzen.Blazor" Version="4.4.6" />
+    <PackageReference Include="Radzen.Blazor" Version="4.5.2" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\FenixAlliance.ABP\FenixAlliance.ABP.SDK\FenixAlliance.ABP.SDK.csproj" />
   </ItemGroup>
 </Project>
