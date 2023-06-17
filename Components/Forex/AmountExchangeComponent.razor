@@ -33,7 +33,7 @@
         try
         {
             await ConvertAmount();
-            this.StateHasChanged();
+            StateHasChanged();
         }
         catch (Exception)
         {
@@ -45,7 +45,7 @@
     {
         if (firstRender)
         {
-            this.StateHasChanged();
+            StateHasChanged();
         }
 
         await ConvertAmount();
