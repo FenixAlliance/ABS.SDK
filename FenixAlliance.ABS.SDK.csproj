@@ -31,7 +31,7 @@
     <None Include="LICENSE.md" Pack="True" PackagePath="" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Radzen.Blazor" Version="4.13.2" />
+    <PackageReference Include="Radzen.Blazor" Version="4.13.6" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\FenixAlliance.ABP\FenixAlliance.ABP.SDK\FenixAlliance.ABP.SDK.csproj" />
