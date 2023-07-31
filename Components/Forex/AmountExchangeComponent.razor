@@ -1,4 +1,5 @@
-﻿@DisplayAmount
+﻿@using FenixAlliance.ABS.SDK.Extensions
+@DisplayAmount
 
 @code {
 
@@ -23,9 +24,9 @@
         if (FromCurrencyID == ToCurrencyID)
             exchangedRate = Amount;
         else
-            exchangedRate = await JS.InvokeAsync<double>("abs.exchangeRate", Amount, FromCurrencyID, ToCurrencyID);
+            exchangedRate = await JS.ExchangeAmount(Amount, FromCurrencyID, ToCurrencyID);
 
-        DisplayAmount = await JS.InvokeAsync<string>("abs.formatAmount", exchangedRate, (ToCurrencyID?.Split(".")?[0] ?? "USD"), Locale);
+        DisplayAmount = await JS.FormatAmount(exchangedRate, (ToCurrencyID?.Split(".")?[0] ?? "USD"), Locale);
     }
 
     protected override async Task OnParametersSetAsync()

@@ -10,6 +10,17 @@
     }
   },
   {
+    "outputFileName": "wwwroot/min/js/abs.min.js",
+    "inputFiles": [
+      "wwwroot/js/utils.js",
+      "wwwroot/js/studio/abs.studio.plugins.js",
+      "wwwroot/js/studio/abs.studio.scripts.js"
+    ],
+    "minify": {
+      "enabled": true
+    }
+  },
+  {
     "outputFileName": "wwwroot/node_modules/nprogress/nprogress.min.css",
     "inputFiles": [
       "wwwroot/node_modules/nprogress/nprogress.css"

@@ -31,5 +31,8 @@
     "sweetalert2": "^11.0.18",
     "tingle.js": "^0.16.0",
     "toastr": "^2.1.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.46.0"
   }
 }

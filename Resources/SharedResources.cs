@@ -2,5 +2,6 @@
 {
 	public class SharedResources
 	{
+		public const string Type = "";
 	}
 }

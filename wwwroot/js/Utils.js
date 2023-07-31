@@ -1,4 +1,7 @@
 ﻿window.abs = {
+    share: function (data) {
+        navigator.share(data)
+    },
     getIp: function () {
         return ip;
     },
@@ -14,18 +17,24 @@
     formatAmount: function (amount, currency = "USD", locale = "en-US", style = "currency", currencyDisplay = "symbol", minimumFractionDigits = 2) {
         return new Intl.NumberFormat(locale, { style: style, currency: currency.split('.')[0], currencyDisplay: currencyDisplay, minimumFractionDigits: minimumFractionDigits }).format(amount)
     },
+    formatCurrency: function (number, currency = "USD", locale = "en-US") {
+        return new Intl.NumberFormat(locale, { style: 'currency', currency: currency }).format(number)
+    },
     exchangeRate: function (amount, from, to) {
         return fx(amount).from(from.split('.')[0]).to(to.split('.')[0]);
     },
-    openUrlNewTab: function (URL) {
-        window.open(URL, '_blank');
+    openUrl: function (url, target = "_blank") {
+        window.open(url, target);
+    },
+    openUrlNewTab: function (url) {
+        window.open(url, "_blank");
     },
     injectScript: function (source) {
         $('<script />', { type: 'text/javascript', src: source }).appendTo('head');
     },
-    addScript: function (URI)  {
+    addScript: function (url)  {
         $(document).ready(function () {
-            $.getScript(URI);
+            $.getScript(url);
         });
     },
     writeCookie: function (name, value, days = 365) {
@@ -67,34 +76,32 @@
         Cookies.set('.AspNetCore.Culture', value);
         window.location.reload();
     },
-    formatCurrency: function (number, currency = "USD", locale = "en-US") {
-        return new Intl.NumberFormat(locale, { style: 'currency', currency: currency }).format(number)
-    },
     notification: function (notificationType, notificationMessage) {
-        abs.toastrNotification(notificationType, notificationMessage);
-    },
-    toastNotification: function (notificationType, notificationMessage) {
-        abs.toastrNotification(notificationType, notificationMessage);
-    },
-    toastrNotification: function (notificationType, notificationMessage) {
         // Display an info toast with no title
         switch (notificationType) {
-        case "info":
-            toastr.info(notificationMessage);
-            break;
-        case "success":
-            toastr.success(notificationMessage);
-            break;
-        case "warning":
-            toastr.warning(notificationMessage);
-            break;
-        case "error":
-            toastr.error(notificationMessage);
-            break;
+            case "info":
+            case "Info":
+                toastr.info(notificationMessage);
+                break;
+            case "Success":
+            case "success":
+                toastr.success(notificationMessage);
+                break;
+            case "Warning":
+            case "warning":
+                toastr.warning(notificationMessage);
+                break;
+            case "Error":
+            case "error":
+                toastr.error(notificationMessage);
+                break;
         }
     },
-    closeHoldOn: function () {
-        HoldOn.close();
+    toastNotification: function (notificationType, notificationMessage) {
+        window.abs.notification(notificationType, notificationMessage);
+    },
+    toastrNotification: function (notificationType, notificationMessage) {
+        window.abs.notification(notificationType, notificationMessage);
     },
     toggleTheme: function () {
         if ($("body").hasClass('theme-dark')) {
@@ -129,6 +136,9 @@
         };
 
         HoldOn.open(options);
+    },
+    closeHoldOn: function () {
+        HoldOn.close();
     },
     finishLoading: function () {
         HoldOn.close();
@@ -176,5 +186,3 @@
         xhr.send();
     }
 };
-
-
