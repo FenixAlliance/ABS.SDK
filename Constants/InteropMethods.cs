@@ -33,9 +33,9 @@
 
 		public const string SetImage = "abs.setImage";
 		public const string SetExchangeRates = "abs.setExchangeRates";
-	
-		
-		
+
+
+
 		public const string Share = "abs.navigator.share";
 		public const string Pay = "abs.pay.paymentRequest";
 
@@ -43,7 +43,7 @@
 		public const string DetectConnectionChanges = "abs.connection.detectConnectionChanges";
 
 		public const string GetLatitude = "abs.geolocation.latitude";
-		public const string GetLongitude = "abs.geolocation.longitude"; 
+		public const string GetLongitude = "abs.geolocation.longitude";
 		public const string GetCurrentPosition = "abs.geolocation.getCurrentPosition";
 
 

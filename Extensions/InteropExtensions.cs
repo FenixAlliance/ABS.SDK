@@ -28,22 +28,22 @@ namespace FenixAlliance.ABS.SDK.Extensions
 		{
 			return await js.InvokeAsync<string>(InteropMethods.GetCartID);
 		}
-		
+
 		public static async Task<string> StartLoading(this IJSRuntime js)
 		{
 			return await js.InvokeAsync<string>(InteropMethods.StartLoading);
 		}
-				
+
 		public static async Task<string> InitPhoneInput(this IJSRuntime js)
 		{
 			return await js.InvokeAsync<string>(InteropMethods.InitPhoneInput);
 		}
-										
+
 		public static async Task<string> FinishLoading(this IJSRuntime js)
 		{
 			return await js.InvokeAsync<string>(InteropMethods.FinishLoading);
 		}
-											
+
 		public static async Task<string> InitForexRates(this IJSRuntime js)
 		{
 			return await js.InvokeAsync<string>(InteropMethods.InitForexRates);
@@ -51,18 +51,19 @@ namespace FenixAlliance.ABS.SDK.Extensions
 
 		public static async Task<string> FormatAmount(this IJSRuntime js, double amount, string currency = "USD", string locale = "en-US", string style = "currency", string currencyDisplay = "symbol", int minimumFractionDigits = 2)
 		{
-			return await js.InvokeAsync<string>(InteropMethods.FormatAmount, amount, currency, locale, style, currencyDisplay, minimumFractionDigits );
+			return await js.InvokeAsync<string>(InteropMethods.FormatAmount, amount, currency, locale, style, currencyDisplay, minimumFractionDigits);
 		}
-		
+
 		public static async Task<string> FormatCurrency(this IJSRuntime js, double amount, string currency = "USD", string locale = "en-US")
 		{
 			return await js.InvokeAsync<string>(InteropMethods.FormatCurrency, amount, currency, locale);
 		}
-				
+
 		public static async Task<T> ExchangeAmount<T>(this IJSRuntime js, T amount, string from, string to)
 		{
 			return await js.InvokeAsync<T>(InteropMethods.ExchangeAmount, amount, from, to);
 		}
+
 		public static async Task<string> Notification(this IJSRuntime js, string type, string message)
 		{
 			return await js.InvokeAsync<string>(InteropMethods.Notification, type, message);
@@ -73,40 +74,40 @@ namespace FenixAlliance.ABS.SDK.Extensions
 			// use switch case for each notification type
 			switch (type)
 			{
-				case NotificationType.Info:
-					await js.Notification("info", message);
-					break;
-				case NotificationType.Error:
-					 await js.Notification( "error", message);
-					break;
-				case NotificationType.Success:
-					 await js.Notification("success", message);
-					 break;
+			case NotificationType.Info:
+			await js.Notification("info", message);
+			break;
+			case NotificationType.Error:
+			await js.Notification("error", message);
+			break;
+			case NotificationType.Success:
+			await js.Notification("success", message);
+			break;
 
-				case NotificationType.Warning:
-					 await js.Notification("warning", message);
-					 break;
-				default:
-					throw new ArgumentOutOfRangeException(nameof(type), type, null);
+			case NotificationType.Warning:
+			await js.Notification("warning", message);
+			break;
+			default:
+			throw new ArgumentOutOfRangeException(nameof(type), type, null);
 			}
 		}
 
 		public static async Task SuccessNotification(this IJSRuntime js, string message)
 		{
-			 await js.Notification( NotificationType.Success, message);
+			await js.Notification(NotificationType.Success, message);
 		}
-		
-		public static async Task WarningNotification(this IJSRuntime js,  string message)
+
+		public static async Task WarningNotification(this IJSRuntime js, string message)
 		{
 			await js.Notification(NotificationType.Warning, message);
 		}
 
-		public static async Task ErrorNotification(this IJSRuntime js,  string message)
+		public static async Task ErrorNotification(this IJSRuntime js, string message)
 		{
 			await js.Notification(NotificationType.Error, message);
 		}
 
-		public static async Task InfoNotification(this IJSRuntime js,  string message)
+		public static async Task InfoNotification(this IJSRuntime js, string message)
 		{
 			await js.Notification(NotificationType.Info, message);
 		}
@@ -140,7 +141,7 @@ namespace FenixAlliance.ABS.SDK.Extensions
 		public static async Task OpenUrlNewTab(this IJSRuntime js, string url)
 		{
 			await js.InvokeVoidAsync(InteropMethods.OpenUrlNewTab, url);
-		}	
+		}
 		public static async Task SelectLang(this IJSRuntime js, string culture)
 		{
 			await js.InvokeVoidAsync(InteropMethods.SelectLang, culture);
@@ -151,7 +152,7 @@ namespace FenixAlliance.ABS.SDK.Extensions
 		}
 		public static async Task PlayNotificationSound(this IJSRuntime js)
 		{
-			await js.PlayAudio( "notification");
+			await js.PlayAudio("notification");
 		}
 		#endregion
 
