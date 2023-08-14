@@ -156,14 +156,11 @@ namespace FenixAlliance.ABS.SDK.Extensions
 		}
 		#endregion
 
-
-
 		#region Geolocation
 		public static async Task<string> GetLatitude(this IJSRuntime js)
 		{
 			return await js.InvokeAsync<string>(InteropMethods.GetLatitude);
 		}
-
 
 		public static async Task<string> GetLongitude(this IJSRuntime js)
 		{
