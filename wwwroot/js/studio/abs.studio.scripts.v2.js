@@ -1,0 +1,1 @@
+window.abs = window.abs || {};

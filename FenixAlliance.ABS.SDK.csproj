@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
   <PropertyGroup>
     <Icon>Icon.png</Icon>
-    <Version>1.9.9.58</Version>
+    <Version>1.9.9.60</Version>
     <language>en-US</language>
     <IsPackable>true</IsPackable>
     <LangVersion>latest</LangVersion>
@@ -35,7 +35,7 @@
     <None Include="wwwroot\node_modules\nprogress\nprogress.min.js" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Radzen.Blazor" Version="4.15.4" />
+    <PackageReference Include="Radzen.Blazor" Version="4.15.7" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\FenixAlliance.ABP\FenixAlliance.ABP.SDK\FenixAlliance.ABP.SDK.csproj" />
